@@ -15,12 +15,12 @@ export default function Contact() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="mx-auto w-full max-w-7xl px-6 py-20 sm:px-8 lg:px-12 lg:py-28">
+      <section className="mx-auto w-full max-w-7xl px-6 py-24 sm:px-8 lg:px-12 sm:py-28 lg:py-32">
         <div className="mx-auto max-w-3xl text-center">
-          <h1 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
+          <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
             İletişim
           </h1>
-          <p className="mt-6 text-lg text-white/90">
+          <p className="mt-8 text-lg text-white/90 font-normal leading-relaxed">
             Sorularınız için bize ulaşın
           </p>
         </div>
@@ -28,17 +28,17 @@ export default function Contact() {
 
       {/* Trust Section */}
       <section className="border-t border-gray-800/50 bg-dark-light">
-        <div className="mx-auto w-full max-w-7xl px-6 py-20 sm:px-8 lg:px-12 lg:py-28">
+        <div className="mx-auto w-full max-w-7xl px-6 py-24 sm:px-8 lg:px-12 sm:py-28 lg:py-32">
           <div className="mx-auto max-w-3xl">
-            <h2 className="text-2xl font-semibold text-white sm:text-3xl">
+            <h2 className="text-2xl font-bold text-white sm:text-3xl mb-6">
               Güven
             </h2>
-            <p className="mt-4 text-base text-white/80">
+            <p className="text-base text-white/80 font-normal leading-relaxed">
               Ready Cube ürünleri, kalite ve güvenilirlik standartlarımıza uygun
               olarak üretilir.
             </p>
 
-            <div className="mt-12 space-y-8">
+            <div className="mt-12 space-y-10">
               <div className="flex items-start">
                 <div className="mr-4 flex-shrink-0">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20">
@@ -61,7 +61,7 @@ export default function Contact() {
                   <h3 className="text-lg font-medium text-white">
                     Türkiye'de Tasarlandı
                   </h3>
-                  <p className="mt-2 text-sm text-white/80 leading-relaxed">
+                  <p className="mt-3 text-base text-white/80 leading-relaxed font-normal">
                     Ready Cube ürünleri, Türkiye'de speedcubing topluluğunun
                     ihtiyaçları göz önünde bulundurularak tasarlanmıştır.
                   </p>
@@ -90,7 +90,7 @@ export default function Contact() {
                   <h3 className="text-lg font-medium text-white">
                     Numune ve Kalite Testlerinden Geçmiştir
                   </h3>
-                  <p className="mt-2 text-sm text-white/80 leading-relaxed">
+                  <p className="mt-3 text-base text-white/80 leading-relaxed font-normal">
                     Her ürün, kullanım senaryolarına uygun olarak test edilir ve
                     kalite kontrolünden geçer.
                   </p>
@@ -119,7 +119,7 @@ export default function Contact() {
                   <h3 className="text-lg font-medium text-white">
                     Profesyonel Kullanım İçin Üretilmiştir
                   </h3>
-                  <p className="mt-2 text-sm text-white/80 leading-relaxed">
+                  <p className="mt-3 text-base text-white/80 leading-relaxed font-normal">
                     Ready Cube ürünleri, yarışma ortamında güvenle kullanılmak
                     üzere tasarlanmış ve üretilmiştir.
                   </p>
@@ -131,12 +131,12 @@ export default function Contact() {
       </section>
 
       {/* Contact Section */}
-      <section className="mx-auto w-full max-w-7xl px-6 py-20 sm:px-8 lg:px-12 lg:py-28">
+      <section className="mx-auto w-full max-w-7xl px-6 py-24 sm:px-8 lg:px-12 sm:py-28 lg:py-32">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-white sm:text-3xl">
+          <h2 className="text-2xl font-bold text-white sm:text-3xl mb-6">
             Bize Ulaşın
           </h2>
-          <p className="mt-4 text-base text-white/80">
+          <p className="text-base text-white/80 font-normal leading-relaxed">
             Sorularınız, önerileriniz veya destek talepleriniz için bizimle
             iletişime geçebilirsiniz.
           </p>

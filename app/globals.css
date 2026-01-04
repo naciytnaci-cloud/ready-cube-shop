@@ -4,6 +4,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Mobile touch optimization */
+@layer utilities {
+  .touch-manipulation {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
 @layer base {
   * {
     @apply border-gray-800;
@@ -11,12 +19,15 @@
   body {
     @apply bg-dark text-white antialiased;
     font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 400;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold text-white;
+    @apply font-bold text-white;
+    letter-spacing: -0.02em;
   }
   p {
-    @apply text-white;
+    @apply text-white font-normal;
+    font-weight: 400;
   }
   a {
     @apply text-white;

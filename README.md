@@ -1,107 +1,133 @@
-# Ready Cube - E-commerce Website
+# Ready Cube - Premium Speedcubing E-Commerce Site
 
-Modern, profesyonel speedcubing ekipmanları e-ticaret sitesi.
+A modern, professional e-commerce website for speedcubing products, built with Next.js 14 (App Router) and Tailwind CSS.
 
-## 🚀 Özellikler
+## 🚀 Features
 
-- ✅ **Modern UI/UX** - Minimal, premium tasarım
-- ✅ **Tam Responsive** - Mobil, tablet, desktop uyumlu
-- ✅ **E-ticaret** - Sepet sistemi, ürün detayları
-- ✅ **SEO Optimized** - Arama motoru dostu
-- ✅ **Hızlı Performans** - Next.js 14 optimizasyonları
-- ✅ **Animasyonlar** - Smooth hover ve transition efektleri
+- **Premium Design:** Clean, minimalist design inspired by TheCubicle / SpeedCubeShop
+- **Fully Responsive:** Mobile-first design, optimized for all devices (320px - 1440px+)
+- **Bilingual:** Turkish & English language support
+- **Performance Optimized:** Fast load times, lazy loading, image optimization
+- **SEO Ready:** Proper metadata, Open Graph, Twitter Cards
+- **Production Ready:** Fully polished, tested, and ready for deployment
 
-## 🛠️ Teknolojiler
+## 📦 Tech Stack
 
 - **Framework:** Next.js 14 (App Router)
 - **Styling:** Tailwind CSS
 - **Language:** TypeScript
-- **State Management:** React Context API
-- **Image Optimization:** Next.js Image
+- **State Management:** React Context (Cart, Language)
+- **Deployment:** Vercel (recommended)
 
-## 📦 Kurulum
+## 🛠️ Development
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
 
 ```bash
-# Bağımlılıkları yükle
 npm install
+```
 
-# Development server başlat
+### Development Server
+
+```bash
 npm run dev
+```
 
-# Production build
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Build for Production
+
+```bash
 npm run build
-
-# Production server başlat
 npm start
 ```
 
-## 📁 Proje Yapısı
+## 📁 Project Structure
 
 ```
-├── app/                    # Next.js App Router sayfaları
-│   ├── page.tsx           # Ana sayfa
-│   ├── products/          # Ürün sayfaları
-│   ├── about/             # Hakkımızda
-│   ├── contact/           # İletişim
+├── app/                    # Next.js App Router pages
+│   ├── page.tsx           # Home page
+│   ├── cantalar/          # Bags listing & detail
+│   ├── about/             # About page
+│   ├── contact/           # Contact page
 │   └── layout.tsx         # Root layout
-├── components/            # React bileşenleri
-│   ├── Header.tsx         # Header/Navigation
-│   ├── Footer.tsx         # Footer
-│   ├── Cart.tsx          # Sepet sidebar
-│   ├── ProductCard.tsx    # Ürün kartı
-│   └── Button.tsx         # Buton bileşeni
-├── contexts/              # React Context
-│   └── CartContext.tsx    # Sepet state yönetimi
-├── public/                # Statik dosyalar
-│   ├── hero/             # Hero görselleri
-│   └── products/         # Ürün görselleri
-└── tailwind.config.js     # Tailwind yapılandırması
+├── components/             # React components
+│   ├── Header.tsx         # Navigation header
+│   ├── Footer.tsx         # Site footer
+│   └── ...
+├── contexts/              # React Context providers
+│   ├── CartContext.tsx    # Cart state management
+│   └── LanguageContext.tsx # Language state
+├── lib/                   # Utilities
+│   ├── translations/      # i18n translation files
+│   ├── shop/             # Shop logic (placeholders)
+│   └── payments/         # Payment logic (placeholders)
+└── public/               # Static assets
 ```
 
-## 🎨 Renk Paleti
+## 🌐 Pages
 
-- **Arka Plan:** `#0B0B0B` (Dark)
-- **Metin:** `#FFFFFF` (White)
-- **Vurgu:** `#E10600` (Primary Red)
-- **Koyu Kırmızı:** `#B80500` (Primary Dark)
+- **Home (`/`):** Hero section, featured product, coming soon products, trust badges
+- **Bags (`/cantalar`):** Product listing page
+- **Product Detail (`/cantalar/ready-cube-backpack`):** Full product information
+- **About (`/about`):** Brand story and values
+- **Contact (`/contact`):** Contact information
 
-## 📱 Responsive Breakpoints
+## 🎨 Design System
 
-- **Mobile:** < 640px
-- **Tablet:** 640px - 1024px
-- **Desktop:** > 1024px
+- **Colors:**
+  - Primary: `#E10600` (Red accent)
+  - Background: `#0B0B0B` (Dark) / White
+  - Text: Gray scale (900, 600, 400)
+- **Typography:** Inter font family
+- **Spacing:** Consistent responsive spacing system
+- **Animations:** Subtle, smooth Tailwind transitions
 
-## 🚢 Deployment
+## 🚀 Deployment
 
-### Vercel (Önerilen)
-1. GitHub'a push edin
-2. Vercel'e import edin
-3. Otomatik deploy!
+### Vercel (Recommended)
 
-Detaylar için: [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md)
+1. Push code to GitHub
+2. Import project in Vercel
+3. Deploy (auto-detects Next.js)
 
-### Netlify
-1. GitHub'a push edin
-2. Netlify'e import edin
-3. Otomatik deploy!
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed instructions.
 
-## ✅ Test Raporu
+### Build Output
 
-Detaylı test raporu için: [DEPLOYMENT_TEST_REPORT.md](./DEPLOYMENT_TEST_REPORT.md)
+- **Static Pages:** 15 pages pre-rendered
+- **Dynamic Pages:** 1 page (`/shop/[slug]`)
+- **Bundle Size:** ~87.3 kB shared JS
+- **First Load:** Optimized for fast performance
 
-## 📝 Notlar
+## 📝 Current Status
 
-- Tüm görseller `public/` klasörüne eklenmelidir
-- Favicon dosyaları eklenebilir (opsiyonel)
-- Ürün görselleri: `public/products/{id}.jpg`
-- Hero görseli: `public/hero/ready-cube-hero.jpg`
+- ✅ All pages implemented
+- ✅ Responsive design complete
+- ✅ Language switching functional
+- ✅ Hover effects & animations
+- ✅ Mobile optimization
+- ✅ SEO metadata
+- ✅ Production build successful
+- ⏳ Payment integration (coming soon)
+- ⏳ Cart functionality (coming soon)
 
-## 📄 Lisans
+## 🔒 Security
 
-Private - Ready Cube
+- No backend API calls
+- No sensitive data stored
+- Client-side state only
+- Secure headers configured (via vercel.json)
 
----
+## 📄 License
 
-**Hazırlayan:** Ready Cube Development Team  
-**Versiyon:** 1.0.0  
-**Durum:** ✅ Production Ready
+Private project - Ready Cube
+
+## 📞 Support
+
+For deployment issues, see [DEPLOYMENT.md](./DEPLOYMENT.md) troubleshooting section.

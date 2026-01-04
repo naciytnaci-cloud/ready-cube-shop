@@ -31,7 +31,9 @@ export default function ProductCard({ id, name, price, image }: ProductCardProps
             alt={`${name} - Profesyonel WCA uyumlu speedcube ürün görseli`}
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-300 ease-out will-change-transform"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            loading="lazy"
+            quality={80}
           />
           <div className="absolute inset-0 flex items-center justify-center bg-gray-900 opacity-0 pointer-events-none">
             <div className="text-center">

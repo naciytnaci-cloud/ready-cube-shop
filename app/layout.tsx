@@ -3,6 +3,8 @@ import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { CartProvider } from '@/contexts/CartContext'
+import { LanguageProvider } from '@/contexts/LanguageContext'
+import ClientPageTransition from '@/components/ClientPageTransition'
 
 export const metadata: Metadata = {
   title: {
@@ -59,16 +61,20 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  return (
-    <html lang="tr" className="scroll-smooth">
-      <body className="bg-dark text-white">
-        <CartProvider>
-          <Header />
-          <main className="min-h-screen">
-            {children}
-          </main>
-          <Footer />
-        </CartProvider>
+          return (
+            <html lang="tr" className="scroll-smooth">
+              <body className="bg-dark text-white scroll-smooth">
+        <LanguageProvider>
+          <CartProvider>
+            <Header />
+            <main className="min-h-screen">
+              <ClientPageTransition>
+                {children}
+              </ClientPageTransition>
+            </main>
+            <Footer />
+          </CartProvider>
+        </LanguageProvider>
       </body>
     </html>
   )
