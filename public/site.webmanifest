@@ -1,0 +1,23 @@
+{
+  "name": "Ready Cube - Profesyonel Speedcubing Ekipmanları",
+  "short_name": "Ready Cube",
+  "description": "Türkiye merkezli profesyonel speedcubing ekipmanları",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#0B0B0B",
+  "background_color": "#0B0B0B",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/"
+}
+
