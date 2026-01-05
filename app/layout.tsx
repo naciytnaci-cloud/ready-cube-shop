@@ -1,18 +1,16 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import { CartProvider } from '@/contexts/CartContext'
 import { LanguageProvider } from '@/contexts/LanguageContext'
+import { CartProvider } from '@/contexts/CartContext'
 import ClientPageTransition from '@/components/ClientPageTransition'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Ready Cube - Profesyonel Speedcubing Ekipmanları',
+    default: 'Ready Cube - Speedcubers for Speedcubers',
     template: '%s | Ready Cube',
   },
-  description: 'Ready Cube, Türkiye merkezli profesyonel speedcubing ekipmanları markası. WCA uyumlu speedcube\'ler ve profesyonel çantalar. Yarışma seviyesinde performans için tasarlandı.',
-  keywords: ['speedcube', 'rubik küp', 'speedcubing', 'WCA', 'yarışma küpü', 'Türkiye', 'ready cube'],
+  description: 'Ready Cube is a platform designed by speedcubers, for speedcubers. Built for the speedcubing community with competition-ready tools and resources.',
+  keywords: ['speedcubing', 'rubik cube', 'ready cube', 'speedcubers', 'speedcube', 'rubiks cube', 'cubing', 'WCA'],
   authors: [{ name: 'Ready Cube' }],
   creator: 'Ready Cube',
   publisher: 'Ready Cube',
@@ -27,16 +25,25 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    locale: 'tr_TR',
+    locale: 'en_US',
     url: 'https://readycube.com',
     siteName: 'Ready Cube',
-    title: 'Ready Cube - Profesyonel Speedcubing Ekipmanları',
-    description: 'Ready Cube, Türkiye merkezli profesyonel speedcubing ekipmanları markası. WCA uyumlu speedcube\'ler ve profesyonel çantalar.',
+    title: 'Ready Cube - Speedcubers for Speedcubers',
+    description: 'Ready Cube is a platform designed by speedcubers, for speedcubers. Built for the speedcubing community with competition-ready tools and resources.',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Ready Cube - Speedcubers for Speedcubers',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ready Cube - Profesyonel Speedcubing Ekipmanları',
-    description: 'Ready Cube, Türkiye merkezli profesyonel speedcubing ekipmanları markası.',
+    title: 'Ready Cube - Speedcubers for Speedcubers',
+    description: 'Ready Cube is a platform designed by speedcubers, for speedcubers. Built for the speedcubing community.',
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,
@@ -61,22 +68,19 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-          return (
-            <html lang="tr" className="scroll-smooth">
-              <body className="bg-dark text-white scroll-smooth">
+  return (
+    <html lang="en" className="scroll-smooth">
+      <body className="bg-white text-gray-900 scroll-smooth">
         <LanguageProvider>
           <CartProvider>
-            <Header />
             <main className="min-h-screen">
               <ClientPageTransition>
                 {children}
               </ClientPageTransition>
             </main>
-            <Footer />
           </CartProvider>
         </LanguageProvider>
       </body>
     </html>
   )
 }
-

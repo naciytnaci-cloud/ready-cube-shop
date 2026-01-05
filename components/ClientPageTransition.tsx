@@ -16,15 +16,15 @@ export default function ClientPageTransition({ children }: { children: React.Rea
     const timer = setTimeout(() => {
       setDisplayChildren(children)
       setIsVisible(true)
-    }, 50)
+    }, 10)
 
     return () => clearTimeout(timer)
   }, [pathname, children])
 
   return (
     <div
-      className={`transition-opacity duration-300 ease-out ${
-        isVisible ? 'opacity-100' : 'opacity-0'
+      className={`${
+        isVisible ? 'page-enter-active' : 'page-enter'
       }`}
     >
       {displayChildren}

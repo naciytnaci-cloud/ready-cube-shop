@@ -70,8 +70,9 @@ export interface MockIyzicoPaymentResponse {
 export async function simulateIyzicoPayment(
   request: MockIyzicoPaymentRequest
 ): Promise<MockIyzicoPaymentResponse> {
-  // Log mock usage in development
+  // Log mock usage in development only (removed in production)
   if (process.env.NODE_ENV === 'development') {
+    // eslint-disable-next-line no-console
     console.warn('⚠️ MOCK PAYMENT: Using simulated iyzico payment. No real transaction will occur.')
   }
 

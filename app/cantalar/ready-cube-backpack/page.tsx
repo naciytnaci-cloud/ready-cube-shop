@@ -1,216 +1,149 @@
 import Link from 'next/link'
+import Navbar from '@/components/Navbar'
+import SimpleFooter from '@/components/SimpleFooter'
 
 export default function ReadyCubeBackpackDetailPage() {
   return (
     <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 md:py-16 lg:py-20">
+      <Navbar />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 md:py-14 lg:py-18 xl:py-20 pt-20 sm:pt-24">
         {/* Breadcrumb Navigation & Back Button */}
-        <div className="mb-8 sm:mb-10 lg:mb-12">
+        <div className="mb-6 sm:mb-8 md:mb-10 lg:mb-12">
           {/* Desktop: Inline Layout */}
           <div className="hidden md:flex items-center justify-between">
             {/* Breadcrumb */}
             <nav className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-gray-500" aria-label="Breadcrumb">
               <Link 
                 href="/" 
-                className="hover:text-gray-700 transition-colors duration-200"
+                className="hover:text-gray-700"
               >
                 Ana Sayfa
               </Link>
-              <svg
-                className="w-4 h-4 text-gray-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
+              <span className="text-gray-400">/</span>
               <Link 
                 href="/cantalar" 
-                className="hover:text-gray-700 transition-colors duration-200"
+                className="hover:text-gray-700"
               >
                 Çantalar
               </Link>
-              <svg
-                className="w-4 h-4 text-gray-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
+              <span className="text-gray-400">/</span>
               <span className="text-gray-900 font-semibold">Ready Cube Backpack</span>
             </nav>
 
             {/* Back to Bags Button */}
             <Link
               href="/cantalar"
-              className="inline-flex items-center text-sm text-gray-500 hover:text-gray-900 transition-colors duration-200"
+              className="text-sm text-gray-500 hover:text-gray-900 btn-active-feedback touch-manipulation min-h-[44px] flex items-center"
             >
-              <svg
-                className="w-4 h-4 mr-2"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-              Mağazaya Dön
+              ← Geri Dön
             </Link>
           </div>
 
           {/* Mobile: Stacked Layout */}
-          <div className="md:hidden space-y-4">
+          <div className="md:hidden space-y-3">
             {/* Breadcrumb */}
-            <nav className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-gray-500" aria-label="Breadcrumb">
+            <nav className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-gray-500 flex-wrap" aria-label="Breadcrumb">
               <Link 
                 href="/" 
-                className="hover:text-gray-700 transition-colors duration-200"
+                className="hover:text-gray-700 btn-active-feedback touch-manipulation min-h-[32px] flex items-center"
               >
                 Ana Sayfa
               </Link>
-              <svg
-                className="w-4 h-4 text-gray-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
+              <span className="text-gray-400">/</span>
               <Link 
                 href="/cantalar" 
-                className="hover:text-gray-700 transition-colors duration-200"
+                className="hover:text-gray-700 btn-active-feedback touch-manipulation min-h-[32px] flex items-center"
               >
                 Çantalar
               </Link>
-              <svg
-                className="w-4 h-4 text-gray-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
+              <span className="text-gray-400">/</span>
               <span className="text-gray-900 font-semibold">Ready Cube Backpack</span>
             </nav>
 
             {/* Back to Bags Button */}
             <Link
               href="/cantalar"
-              className="inline-flex items-center text-sm text-gray-500 hover:text-gray-900 transition-colors duration-200"
+              className="text-sm text-gray-500 hover:text-gray-900 btn-active-feedback touch-manipulation min-h-[44px] flex items-center"
             >
-              <svg
-                className="w-4 h-4 mr-2"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-              Mağazaya Dön
+              ← Geri Dön
             </Link>
           </div>
         </div>
 
         {/* Hero Section - Two Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-16 sm:mb-20 md:mb-24 lg:mb-28">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 xl:gap-16 mb-12 sm:mb-16 md:mb-20 lg:mb-24 xl:mb-28">
           {/* Left: Product Image */}
           <div className="w-full flex items-center justify-center">
-            <div className="aspect-square w-full max-w-lg bg-gray-100 rounded-lg overflow-hidden border border-gray-200 relative group/image hover:border-gray-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-out">
-              <div className="absolute inset-0 flex items-center justify-center group-hover/image:scale-110 transition-transform duration-500 ease-out">
-                <svg
-                  className="w-40 h-40 text-gray-300"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
-                  />
-                </svg>
-              </div>
+            <div className="aspect-square w-full max-w-lg bg-gray-100 rounded-lg border border-gray-200 transition-opacity duration-300 ease-in">
             </div>
           </div>
 
           {/* Right: Product Info */}
           <div className="flex flex-col justify-center">
             {/* Product Title */}
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-3 sm:mb-4 tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 mb-3 sm:mb-4 tracking-tight leading-tight">
               Ready Cube Backpack
             </h1>
 
-            {/* Subtitle */}
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-4 sm:mb-6 leading-relaxed font-normal">
-              Speedcubing için özel tasarlanmış premium çanta
+            {/* Short Description */}
+            <p className="text-base sm:text-lg md:text-xl text-gray-500 mb-5 sm:mb-6 md:mb-8 leading-relaxed font-normal">
+              Speedcubing ekipmanlarını düzenli, güvenli ve pratik şekilde taşımak için tasarlandı.
             </p>
 
-            {/* Status Badge */}
-            <div className="mb-6">
-              <span className="inline-block bg-gray-100 text-gray-600 text-xs font-medium px-3 py-1.5 rounded-full tracking-wide">
-                Yakında Satışta
-              </span>
+            {/* Status Text */}
+            <div className="mb-6 sm:mb-8 space-y-3">
+              <div className="bg-gray-50 border border-gray-200 rounded-md p-4">
+                <p className="text-sm sm:text-base text-gray-900 font-medium mb-2">
+                  Satışlar henüz açık değil
+                </p>
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-normal mb-2">
+                  Ürün üretim aşamasındadır.
+                </p>
+                <p className="text-xs sm:text-sm text-gray-500 leading-relaxed font-normal">
+                  Satışlar açıldığında buradan duyurulacaktır.
+                </p>
+              </div>
             </div>
 
-            {/* Short Description */}
-            <p className="text-base sm:text-lg text-gray-600 mb-8 leading-relaxed font-normal">
-              Profesyonel speedcubers için tasarlanmış, tüm WCA bulmacalarını güvenle taşıyabileceğiniz premium taşıma çantası. Günlük kullanımdan turnuva ortamlarına kadar her duruma uygun.
-            </p>
+            {/* Purchase Button - Disabled, Ready for Future */}
+            <div className="mt-6 sm:mt-8">
+              <button
+                disabled
+                className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-gray-200 text-gray-400 font-medium rounded-md cursor-not-allowed text-base sm:text-lg md:text-xl min-w-[200px] min-h-[48px] sm:min-h-[56px] opacity-75"
+                aria-label="Satın Al (Yakında)"
+              >
+                Satın Al (Yakında)
+              </button>
+            </div>
 
-            {/* Disabled Primary Button */}
-            <button
-              disabled
-              className="w-full bg-gray-200 text-gray-500 py-3.5 sm:py-4 px-6 sm:px-8 rounded-lg font-semibold text-sm sm:text-base text-center cursor-not-allowed opacity-60 hover:opacity-70 active:scale-[0.98] transition-all duration-200 ease-out touch-manipulation min-h-[44px]"
-              aria-label="Satışlar Yakında"
-            >
-              Satışlar Yakında
-            </button>
           </div>
         </div>
 
         {/* Divider */}
-        <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-16 sm:mb-20 md:mb-24 lg:mb-28"></div>
+        <div className="h-px bg-gray-100 mb-16 sm:mb-20 md:mb-24 lg:mb-28"></div>
 
         {/* Features Section */}
-        <section className="mb-16 sm:mb-20 md:mb-24 lg:mb-28">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-gray-900 mb-8 sm:mb-10 md:mb-12 tracking-tight">
-            Öne Çıkan Özellikler
+        <section className="mb-16 sm:mb-20 md:mb-24 lg:mb-28 section-fade-in">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-900 mb-8 sm:mb-10 md:mb-12 tracking-tight leading-tight flex items-center gap-2">
+            <svg
+              className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-gray-400 flex-shrink-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.5}
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            Özellikler
           </h2>
           <ul className="space-y-5 max-w-3xl">
-            <li className="flex items-start group/feature">
+            <li className="flex items-start gap-3 text-base sm:text-lg text-gray-500 font-normal leading-relaxed">
               <svg
-                className="w-6 h-6 text-gray-900 mr-4 flex-shrink-0 mt-0.5 group-hover/feature:text-[#E10600] transition-colors duration-200"
+                className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -218,17 +151,15 @@ export default function ReadyCubeBackpackDetailPage() {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M5 13l4 4L19 7"
+                  strokeWidth={1.5}
+                  d="M5 12h14"
                 />
               </svg>
-              <span className="text-base sm:text-lg text-gray-600 font-normal leading-relaxed group-hover/feature:text-gray-900 transition-colors duration-200">
-                2x2'den 7x7'ye tüm WCA küplerine uyum
-              </span>
+              <span>WCA küplerine uyumlu iç düzen</span>
             </li>
-            <li className="flex items-start group/feature">
+            <li className="flex items-start gap-3 text-base sm:text-lg text-gray-500 font-normal leading-relaxed">
               <svg
-                className="w-6 h-6 text-gray-900 mr-4 flex-shrink-0 mt-0.5 group-hover/feature:text-[#E10600] transition-colors duration-200"
+                className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -236,17 +167,15 @@ export default function ReadyCubeBackpackDetailPage() {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M5 13l4 4L19 7"
+                  strokeWidth={1.5}
+                  d="M5 12h14"
                 />
               </svg>
-              <span className="text-base sm:text-lg text-gray-600 font-normal leading-relaxed group-hover/feature:text-gray-900 transition-colors duration-200">
-                Özel süngerli iç düzen
-              </span>
+              <span>Sünger destekli koruma alanı</span>
             </li>
-            <li className="flex items-start group/feature">
+            <li className="flex items-start gap-3 text-base sm:text-lg text-gray-500 font-normal leading-relaxed">
               <svg
-                className="w-6 h-6 text-gray-900 mr-4 flex-shrink-0 mt-0.5 group-hover/feature:text-[#E10600] transition-colors duration-200"
+                className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -254,17 +183,15 @@ export default function ReadyCubeBackpackDetailPage() {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M5 13l4 4L19 7"
+                  strokeWidth={1.5}
+                  d="M5 12h14"
                 />
               </svg>
-              <span className="text-base sm:text-lg text-gray-600 font-normal leading-relaxed group-hover/feature:text-gray-900 transition-colors duration-200">
-                Laptop ve şarj alanı
-              </span>
+              <span>Günlük kullanım ve yarışmalar için ideal</span>
             </li>
-            <li className="flex items-start group/feature">
+            <li className="flex items-start gap-3 text-base sm:text-lg text-gray-500 font-normal leading-relaxed">
               <svg
-                className="w-6 h-6 text-gray-900 mr-4 flex-shrink-0 mt-0.5 group-hover/feature:text-[#E10600] transition-colors duration-200"
+                className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -272,69 +199,170 @@ export default function ReadyCubeBackpackDetailPage() {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M5 13l4 4L19 7"
+                  strokeWidth={1.5}
+                  d="M5 12h14"
                 />
               </svg>
-              <span className="text-base sm:text-lg text-gray-600 font-normal leading-relaxed group-hover/feature:text-gray-900 transition-colors duration-200">
-                Premium fermuar ve kumaş
-              </span>
-            </li>
-            <li className="flex items-start group/feature">
-              <svg
-                className="w-6 h-6 text-gray-900 mr-4 flex-shrink-0 mt-0.5 group-hover/feature:text-[#E10600] transition-colors duration-200"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
-              <span className="text-base sm:text-lg text-gray-600 font-normal leading-relaxed group-hover/feature:text-gray-900 transition-colors duration-200">
-                Günlük kullanım ve yarışmalar için ideal
-              </span>
+              <span>Minimal, sade ve dayanıklı tasarım</span>
             </li>
           </ul>
         </section>
 
         {/* Divider */}
-        <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-16 sm:mb-20 md:mb-24 lg:mb-28"></div>
+        <div className="h-px bg-gray-100 mb-16 sm:mb-20 md:mb-24 lg:mb-28"></div>
+
+        {/* Interior Layout Logic Section */}
+        <section className="mb-16 sm:mb-20 md:mb-24 lg:mb-28 section-fade-in">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-900 mb-8 sm:mb-10 md:mb-12 tracking-tight leading-tight flex items-center gap-2">
+            <svg
+              className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-gray-400 flex-shrink-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.5}
+                d="M4 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-3zM14 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1h-4a1 1 0 01-1-1v-3z"
+              />
+            </svg>
+            İç Düzen
+          </h2>
+          <div className="max-w-3xl space-y-6">
+            {/* Küp Bölmeleri */}
+            <div className="pb-6 border-b border-gray-200">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 leading-tight">
+                Küp Bölmeleri
+              </h3>
+              <p className="text-base sm:text-lg text-gray-500 leading-relaxed font-normal">
+                Küplerin birbirine temas etmemesi için ölçülendirilmiş, düzenli bölmeler.
+              </p>
+            </div>
+
+            {/* Koruma Katmanı */}
+            <div className="pb-6 border-b border-gray-200">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 leading-tight">
+                Koruma Katmanı
+              </h3>
+              <p className="text-base sm:text-lg text-gray-500 leading-relaxed font-normal">
+                Çanta kapağında yer alan süngerli yapı, taşıma sırasında ekipmanları darbelere karşı korur.
+              </p>
+            </div>
+
+            {/* Ek Alanlar */}
+            <div>
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 leading-tight">
+                Ek Alanlar
+              </h3>
+              <p className="text-base sm:text-lg text-gray-500 leading-relaxed font-normal">
+                Şarj kablosu, küçük aksesuarlar ve günlük eşyalar için ayrılmış pratik cepler.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Divider */}
+        <div className="h-px bg-gray-100 mb-16 sm:mb-20 md:mb-24 lg:mb-28"></div>
+
+        {/* Who Is This For Section */}
+        <section className="mb-16 sm:mb-20 md:mb-24 lg:mb-28 section-fade-in">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-900 mb-8 sm:mb-10 md:mb-12 tracking-tight leading-tight flex items-center gap-2">
+            <svg
+              className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-gray-400 flex-shrink-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.5}
+                d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+              />
+            </svg>
+            Kimler İçin
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl">
+            {/* Card 1: Yarışmacılar */}
+            <div className="border border-gray-200 rounded-md p-6 h-full flex flex-col hover:border-gray-300 transition-all duration-200">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 leading-tight">
+                Yarışmacılar İçin
+              </h3>
+              <p className="text-base sm:text-lg text-gray-500 leading-relaxed font-normal flex-grow">
+                Turnuvalarda küplerini güvenle taşımak isteyen speedcuber'lar için.
+              </p>
+            </div>
+
+            {/* Card 2: Günlük Kullanım */}
+            <div className="border border-gray-200 rounded-md p-6 h-full flex flex-col hover:border-gray-300 transition-all duration-200">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 leading-tight">
+                Günlük Kullanım İçin
+              </h3>
+              <p className="text-base sm:text-lg text-gray-500 leading-relaxed font-normal flex-grow">
+                Okulda, şehirde veya seyahatte ekipmanlarını yanında taşımak isteyenler için.
+              </p>
+            </div>
+
+            {/* Card 3: Koleksiyon Sahipleri */}
+            <div className="border border-gray-200 rounded-md p-6 h-full flex flex-col hover:border-gray-300 transition-all duration-200">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 leading-tight">
+                Koleksiyon Sahipleri İçin
+              </h3>
+              <p className="text-base sm:text-lg text-gray-500 leading-relaxed font-normal flex-grow">
+                Birden fazla küpü düzenli ve korumalı şekilde saklamak isteyenler için.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Divider */}
+        <div className="h-px bg-gray-100 mb-16 sm:mb-20 md:mb-24 lg:mb-28"></div>
 
         {/* Interior / Layout Section */}
-        <section className="mb-16 sm:mb-20 md:mb-24 lg:mb-28">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-gray-900 mb-8 sm:mb-10 md:mb-12 tracking-tight">
-            İç Tasarım
+        <section className="mb-16 sm:mb-20 md:mb-24 lg:mb-28 section-fade-in">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-900 mb-8 sm:mb-10 md:mb-12 tracking-tight leading-tight flex items-center gap-2">
+            <svg
+              className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-gray-400 flex-shrink-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.5}
+                d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a4 4 0 004-4V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4z"
+              />
+            </svg>
+            Tasarım
           </h2>
           <div className="max-w-3xl">
-            <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-8 sm:mb-10 leading-relaxed font-normal">
-              Çantanın iç yapısı, speedcubers'ın gerçek ihtiyaçları göz önünde bulundurularak tasarlanmıştır. Her detay, güvenli taşıma ve kolay erişim için optimize edilmiştir.
+            <p className="text-base sm:text-lg text-gray-500 mb-8 sm:mb-10 leading-relaxed font-normal">
+              Çantanın iç yapısı, speedcuberların gerçek ihtiyaçları göz önünde bulundurularak tasarlanmıştır. Her detay, güvenli taşıma ve kolay erişim için optimize edilmiştir.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {/* Küp Bölmeleri */}
-              <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 hover:shadow-md hover:border-gray-300 hover:-translate-y-0.5 transition-all duration-200 ease-out cursor-default">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">Küp Bölmeleri</h3>
-                <p className="text-sm text-gray-600 leading-relaxed font-normal">
+              <div className="bg-gray-50 border border-gray-200 rounded-md p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3 leading-tight">Küp Bölmeleri</h3>
+                <p className="text-sm text-gray-500 leading-relaxed font-normal">
                   Her küp için özel olarak tasarlanmış korumalı bölmeler. 2x2'den 7x7'ye kadar tüm WCA bulmacaları için uygun.
                 </p>
               </div>
 
               {/* Süngerli Kapak */}
-              <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 hover:shadow-md hover:border-gray-300 hover:-translate-y-0.5 transition-all duration-200 ease-out cursor-default">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">Süngerli Kapak</h3>
-                <p className="text-sm text-gray-600 leading-relaxed font-normal">
+              <div className="bg-gray-50 border border-gray-200 rounded-md p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3 leading-tight">Süngerli Kapak</h3>
+                <p className="text-sm text-gray-500 leading-relaxed font-normal">
                   Üst kısımda darbe emici süngerli kapak. Küplerinizi dış etkenlerden korur ve güvenli taşıma sağlar.
                 </p>
               </div>
 
               {/* Ek Cepler */}
-              <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 hover:shadow-md hover:border-gray-300 hover:-translate-y-0.5 transition-all duration-200 ease-out cursor-default">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">Ek Cepler</h3>
-                <p className="text-sm text-gray-600 leading-relaxed font-normal">
+              <div className="bg-gray-50 border border-gray-200 rounded-md p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3 leading-tight">Ek Cepler</h3>
+                <p className="text-sm text-gray-500 leading-relaxed font-normal">
                   Laptop, şarj aleti ve diğer aksesuarlar için ekstra cepler. Organize ve düzenli taşıma imkanı.
                 </p>
               </div>
@@ -343,129 +371,143 @@ export default function ReadyCubeBackpackDetailPage() {
         </section>
 
         {/* Divider */}
-        <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-16 sm:mb-20 md:mb-24 lg:mb-28"></div>
+        <div className="h-px bg-gray-100 mb-16 sm:mb-20 md:mb-24 lg:mb-28"></div>
 
         {/* Shipping & Availability Section */}
-        <section className="max-w-3xl mx-auto mb-16 sm:mb-20 md:mb-24 lg:mb-28">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-gray-900 mb-8 sm:mb-10 md:mb-12 tracking-tight">
-            Durum & Teslimat
+        <section className="max-w-3xl mx-auto mb-16 sm:mb-20 md:mb-24 lg:mb-28 section-fade-in">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-900 mb-8 sm:mb-10 md:mb-12 tracking-tight leading-tight flex items-center gap-2">
+            <svg
+              className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-gray-400 flex-shrink-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.5}
+                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            Durum
           </h2>
-          <div className="space-y-4 sm:space-y-6 text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed font-normal">
-            <p>
-              Ready Cube Backpack şu anda üretim aşamasındadır. Speedcubing topluluğunun geri bildirimleri doğrultusunda son haline getirilmektedir.
-            </p>
-            <p>
-              İlk etapta Türkiye içi satış planlanmaktadır. Ürün hazır olduğunda, Türkiye genelinde hızlı ve güvenli teslimat seçenekleri sunulacaktır.
-            </p>
-            <p>
-              Satış açıldığında siteden duyurulacak. Ürünün satışa çıkması için e-posta bildirim listesine kayıt olabilirsiniz.
-            </p>
+          <div className="space-y-4">
+            <div className="bg-gray-50 border border-gray-200 rounded-md p-6">
+              <p className="text-base sm:text-lg text-gray-900 font-medium mb-2">
+                Satışlar henüz açık değil
+              </p>
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-normal mb-2">
+                Ürün üretim aşamasındadır.
+              </p>
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed font-normal">
+                Satışlar açıldığında buradan duyurulacaktır.
+              </p>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-md p-6">
+              <p className="text-sm sm:text-base text-gray-500 leading-relaxed font-normal">
+                Türkiye içi teslimat planlanmaktadır. Kargo ve ödeme detayları satışlar açıldığında paylaşılacaktır.
+              </p>
+            </div>
           </div>
         </section>
 
         {/* Divider */}
-        <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-16 sm:mb-20 md:mb-24 lg:mb-28"></div>
+        <div className="h-px bg-gray-100 mb-16 sm:mb-20 md:mb-24 lg:mb-28"></div>
 
-        {/* Payment Section */}
-        <section className="max-w-2xl mx-auto">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-gray-900 mb-8 sm:mb-10 md:mb-12 tracking-tight">
+        {/* Payment Section - Ready for Iyzico */}
+        <section className="max-w-3xl mx-auto mb-16 sm:mb-20 md:mb-24 lg:mb-28 section-fade-in">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-900 mb-4 sm:mb-6 tracking-tight leading-tight flex items-center gap-2">
+            <svg
+              className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-gray-400 flex-shrink-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.5}
+                d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
+              />
+            </svg>
             Satın Alma
           </h2>
+          
+          <div className="mb-6">
+            <p className="text-xs sm:text-sm text-gray-500 leading-relaxed font-normal">
+              Ödeme altyapısı: Iyzico (yakında)
+            </p>
+            <p className="text-xs text-gray-400 leading-relaxed font-normal mt-1">
+              Satışlar açıldığında güvenli ödeme altyapısı aktif olacaktır.
+            </p>
+          </div>
 
-          {/* Payment Form Placeholder */}
-          <div className="bg-white border border-gray-200 rounded-xl p-6 sm:p-8 shadow-sm">
+          <div className="bg-white border border-gray-200 rounded-md p-6 space-y-4">
             {/* Card Number */}
-            <div className="mb-6">
-              <label className="block text-sm font-semibold text-gray-700 mb-2">
+            <div>
+              <label className="block text-sm text-gray-600 mb-2 font-medium">
                 Kart Numarası
               </label>
               <input
                 type="text"
-                placeholder="1234 5678 9012 3456"
                 disabled
-                readOnly
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-gray-50 text-gray-500 cursor-not-allowed focus:outline-none focus:ring-0 font-mono text-base"
-                aria-label="Kart Numarası (Yakında)"
+                placeholder="0000 0000 0000 0000"
+                className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-md text-gray-400 cursor-not-allowed text-sm sm:text-base"
               />
             </div>
 
-            {/* Expiration Date & CVC Row */}
-            <div className="grid grid-cols-2 gap-4 mb-6">
-              {/* Expiration Date */}
+            {/* Expiry and CVC */}
+            <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  Son Kullanma Tarihi
+                <label className="block text-sm text-gray-600 mb-2 font-medium">
+                  Son Kullanma
                 </label>
                 <input
                   type="text"
-                  placeholder="AA/YY"
                   disabled
-                  readOnly
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-gray-50 text-gray-500 cursor-not-allowed focus:outline-none focus:ring-0 font-mono text-base"
-                  aria-label="Son Kullanma Tarihi (Yakında)"
+                  placeholder="AA/YY"
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-md text-gray-400 cursor-not-allowed text-sm sm:text-base"
                 />
               </div>
-
-              {/* CVC */}
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                <label className="block text-sm text-gray-600 mb-2 font-medium">
                   CVC
                 </label>
                 <input
                   type="text"
-                  placeholder="123"
                   disabled
-                  readOnly
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-gray-50 text-gray-500 cursor-not-allowed focus:outline-none focus:ring-0 font-mono text-base"
-                  aria-label="CVC (Yakında)"
+                  placeholder="000"
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-md text-gray-400 cursor-not-allowed text-sm sm:text-base"
                 />
               </div>
             </div>
 
-            {/* Name on Card */}
-            <div className="mb-8">
-              <label className="block text-sm font-semibold text-gray-700 mb-2">
+            {/* Cardholder Name */}
+            <div>
+              <label className="block text-sm text-gray-600 mb-2 font-medium">
                 Kart Üzerindeki İsim
               </label>
               <input
                 type="text"
-                placeholder="Ad Soyad"
                 disabled
-                readOnly
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-gray-50 text-gray-500 cursor-not-allowed focus:outline-none focus:ring-0 text-base"
-                aria-label="Kart Üzerindeki İsim (Yakında)"
+                placeholder="Ad Soyad"
+                className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-md text-gray-400 cursor-not-allowed text-sm sm:text-base"
               />
             </div>
 
-            {/* Payment Button */}
+            {/* Submit Button */}
             <button
               disabled
-              className="w-full bg-gray-200 text-gray-500 py-3.5 sm:py-4 px-6 sm:px-8 rounded-lg font-semibold text-sm sm:text-base text-center cursor-not-allowed opacity-60 hover:opacity-70 active:scale-[0.98] transition-all duration-200 ease-out touch-manipulation min-h-[44px] flex items-center justify-center gap-2"
-              aria-label="Satışlar Açıldığında Buradan Satın Al"
+              className="w-full px-6 py-4 bg-gray-200 text-gray-400 font-medium rounded-md cursor-not-allowed text-base sm:text-lg mt-4 opacity-75"
+              aria-label="Ödeme (Yakında)"
             >
-              <span>Satışlar Açıldığında Buradan Satın Al</span>
-              <svg
-                className="w-4 h-4 sm:w-5 sm:h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
+              Ödeme (Yakında)
             </button>
-
-            {/* Helper Text */}
-            <p className="mt-4 text-xs sm:text-sm text-gray-500 text-center font-normal">
-              Ödeme sistemi yakında aktif olacaktır
-            </p>
           </div>
         </section>
+
       </div>
+      <SimpleFooter />
     </div>
   )
 }

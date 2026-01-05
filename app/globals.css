@@ -14,22 +14,126 @@
 
 @layer base {
   * {
-    @apply border-gray-800;
+    @apply border-gray-200;
   }
   body {
-    @apply bg-dark text-white antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
+    @apply bg-white text-gray-900 antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     font-weight: 400;
+    line-height: 1.6;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold text-white;
+    @apply font-semibold text-gray-900;
     letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  /* Mobile typography improvements */
+  @media (max-width: 640px) {
+    h1, h2, h3, h4, h5, h6 {
+      line-height: 1.3;
+    }
+    p {
+      line-height: 1.75;
+    }
   }
   p {
-    @apply text-white font-normal;
+    @apply text-gray-500 font-normal;
     font-weight: 400;
+    line-height: 1.7;
   }
   a {
-    @apply text-white;
+    @apply text-gray-900;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 0.5px;
+    text-underline-offset: 3px;
+  }
+}
+
+/* Keyframe animations (must be outside @layer) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Page transition and loading states */
+@layer utilities {
+  .page-enter {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  
+  .page-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 200ms ease-out, transform 200ms ease-out;
+  }
+  
+  .section-fade-in {
+    opacity: 0;
+    animation: fadeInUp 300ms ease-out forwards;
+  }
+  
+  /* Image skeleton placeholder */
+  .image-skeleton {
+    background: linear-gradient(
+      90deg,
+      #f3f4f6 0%,
+      #e5e7eb 50%,
+      #f3f4f6 100%
+    );
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s ease-in-out infinite;
+  }
+  
+  /* Button active feedback */
+  .btn-active-feedback:active {
+    transform: scale(0.98);
+    transition: transform 100ms ease-out;
+  }
+  
+  /* Mobile tap feedback - instant and clear */
+  @media (max-width: 640px) {
+    .btn-active-feedback:active {
+      opacity: 0.85;
+      transform: scale(0.97);
+    }
+    
+    /* Ensure all interactive elements have minimum touch target */
+    button, a, [role="button"] {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
+  
+  /* Mobile-first spacing utilities */
+  .mobile-safe-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .mobile-safe-padding {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
   }
 }

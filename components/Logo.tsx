@@ -1,28 +1,36 @@
 import Link from 'next/link'
-import Image from 'next/image'
 
-export default function Logo() {
+interface LogoProps {
+  variant?: 'default' | 'minimal'
+  showIcon?: boolean
+  className?: string
+}
+
+export default function Logo({ variant = 'default', showIcon = false, className = '' }: LogoProps) {
   return (
     <Link 
       href="/" 
-      className="flex items-center justify-start group focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-dark rounded-sm transition-opacity duration-200 hover:opacity-90"
+      className={`group focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 transition-opacity duration-200 hover:opacity-90 ${className}`}
       aria-label="Ready Cube Ana Sayfa"
     >
-      <div className="relative flex-shrink-0 h-8 w-auto sm:h-10 md:h-11">
-        <Image
-          src="/logo.png"
-          alt="Ready Cube - Profesyonel Speedcubing Ekipmanları Logosu"
-          width={160}
-          height={44}
-          priority
-          quality={95}
-          className="h-full w-auto object-contain"
-          style={{
-            filter: 'brightness(0) invert(1) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3))',
-          }}
-        />
-      </div>
+      <span className="text-gray-900 font-semibold text-lg sm:text-xl md:text-2xl tracking-tight">
+        Ready Cube
+      </span>
     </Link>
   )
 }
 
+// Minimal variant (text only, no icon)
+export function LogoMinimal({ className = '' }: { className?: string }) {
+  return (
+    <Link 
+      href="/" 
+      className={`group focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 transition-opacity duration-200 hover:opacity-90 ${className}`}
+      aria-label="Ready Cube Ana Sayfa"
+    >
+      <span className="text-gray-900 font-semibold text-base sm:text-lg tracking-tight">
+        Ready Cube
+      </span>
+    </Link>
+  )
+}
