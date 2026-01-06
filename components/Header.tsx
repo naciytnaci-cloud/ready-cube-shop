@@ -37,7 +37,7 @@ export default function Header() {
   const navItems = [
     { href: '/', label: language === 'tr' ? 'Ana Sayfa' : 'Home' },
     { href: '/cantalar', label: language === 'tr' ? 'Çantalar' : 'Bags' },
-    { href: '/shop/cubes', label: language === 'tr' ? 'WCA Küpleri' : 'WCA Cubes', comingSoon: true },
+    { href: '/shop', label: language === 'tr' ? 'Shop' : 'Shop', comingSoon: false },
     { href: '/about', label: language === 'tr' ? 'Hakkımızda' : 'About' },
   ]
 

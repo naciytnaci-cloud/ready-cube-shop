@@ -179,7 +179,7 @@ export default function About() {
             <li className="flex items-start">
               <span className="text-gray-900 mr-4 font-bold text-lg">•</span>
               <span className="text-base sm:text-lg text-gray-600 font-normal leading-relaxed">
-                <strong className="font-semibold text-gray-900">İlk ürün:</strong> Ready Cube Premium Speedcubing Backpack. Türkiye'deki speedcubing topluluğunun geri bildirimleri doğrultusunda geliştiriliyor.
+                <strong className="font-semibold text-gray-900">İlk ürün:</strong> Ready Cube Bag. Türkiye'deki speedcubing topluluğunun geri bildirimleri doğrultusunda geliştiriliyor.
               </span>
             </li>
             <li className="flex items-start">

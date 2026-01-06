@@ -1,73 +1,73 @@
 import Link from 'next/link'
+import Navbar from '@/components/Navbar'
+import SimpleFooter from '@/components/SimpleFooter'
+import BuyNowButton from '@/components/BuyNowButton'
 
 export default function ShopPage() {
   return (
     <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
-        {/* Header - Centered */}
-        <div className="text-center mb-16 sm:mb-20 lg:mb-24">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
+      <Navbar />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 pb-16 sm:pb-20 md:pb-24">
+        {/* Page Title */}
+        <div className="mb-12 sm:mb-16 md:mb-20 text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-dark tracking-tight leading-tight">
             Shop
           </h1>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto font-normal leading-relaxed">
-            Speedcubers için tasarlandı
+          <p className="mt-3 text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+            Tek ürün. Net odak.
           </p>
+          <div className="mt-8 h-px bg-[#111111]/10" />
         </div>
 
-        {/* Product Grid - Centered, Single Product */}
-        <div className="flex justify-center">
-          <div className="w-full max-w-sm">
-            {/* Product Card */}
-            <Link href="/shop/ready-cube-backpack" className="group bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-gray-300 active:scale-[0.98] md:active:scale-100 transition-all duration-300 ease-out cursor-pointer block touch-manipulation">
-              {/* Product Image Placeholder */}
-              <div className="aspect-square bg-gray-100 relative overflow-hidden group-hover:bg-gray-50 transition-colors duration-300">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <svg
-                    className="w-24 h-24 text-gray-300 group-hover:text-gray-400 group-hover:scale-110 transition-all duration-300 ease-out"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
-                    />
-                  </svg>
-                </div>
+        {/* Single Product Overview */}
+        <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 items-start">
+            {/* Image */}
+            <div className="rounded-xl bg-neutralSurface border border-[#111111]/10 overflow-hidden">
+              <div className="aspect-square flex items-center justify-center">
+                <span className="text-sm text-gray-500 font-medium tracking-wide">
+                  Ürün Görseli
+                </span>
+              </div>
+            </div>
+
+            {/* Info */}
+            <div className="flex flex-col">
+              <div className="inline-flex items-center self-start bg-brand-soft text-brand border border-[#111111]/10 text-xs font-semibold px-3 py-1.5 rounded-full">
+                Yakında
               </div>
 
-              {/* Product Info */}
-              <div className="p-6">
-                {/* Badge */}
-                <div className="mb-3">
-                  <span className="inline-block bg-[#E10600] text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide">
-                    COMING SOON
-                  </span>
-                </div>
+              <h2 className="mt-4 text-2xl sm:text-3xl font-semibold text-dark tracking-tight">
+                Ready Cube Bag
+              </h2>
+              <p className="mt-3 text-base text-gray-600 leading-relaxed">
+                Speedcubing ekipmanları için premium taşıma çantası.
+              </p>
 
-                {/* Product Name */}
-                <h3 className="text-xl sm:text-2xl font-extrabold text-gray-900 mb-3 group-hover:text-gray-700 transition-colors duration-200 leading-tight">
-                  Ready Cube Backpack
-                </h3>
-
-                {/* Price Area */}
-                <div className="mb-6">
-                  <p className="text-2xl font-bold text-gray-400">
-                    YAKINDA
-                  </p>
-                </div>
-
-                {/* Button - Disabled */}
-                <div className="w-full bg-gray-200 text-gray-500 py-3 px-6 rounded-lg font-semibold text-sm text-center">
+              <div className="mt-6">
+                <div className="text-sm text-gray-500">Fiyat</div>
+                <div className="mt-1 text-xl font-semibold text-dark">
                   Yakında
                 </div>
               </div>
-            </Link>
+
+              <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <BuyNowButton
+                  className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-brand hover:bg-brand-hover active:bg-brand-hover text-white font-semibold rounded-md transition-colors duration-200 ease-out min-h-[48px] touch-manipulation btn-active-feedback"
+                />
+                <Link
+                  href="/product"
+                  className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-white border border-[#111111]/15 text-dark font-semibold rounded-md min-h-[48px]"
+                >
+                  Ürünü İncele
+                </Link>
+              </div>
+              <p className="mt-3 text-sm text-gray-500">Satışlar yakında açılıyor.</p>
+            </div>
           </div>
         </div>
       </div>
+      <SimpleFooter />
     </div>
   )
 }

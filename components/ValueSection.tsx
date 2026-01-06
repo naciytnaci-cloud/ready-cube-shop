@@ -1,34 +1,29 @@
-const values = [
+const features = [
   {
-    title: 'Topluluk odaklı',
-    description: 'Speedcubing topluluğunun gerçek ihtiyaçlarına göre tasarlandı.',
+    title: 'Türkiye Odaklı',
   },
   {
-    title: 'Yarışma odaklı',
-    description: 'Ciddi speedcuberlar ve turnuvalar için geliştirildi.',
+    title: 'Premium Kalite',
   },
   {
-    title: 'Gerçek kullanım',
-    description: 'Her detay, gerçek kullanım senaryoları göz önünde bulundurularak tasarlandı.',
+    title: 'Speedcubing İçin Tasarlandı',
   },
 ]
 
 export default function ValueSection() {
   return (
-    <section id="values" className="py-16 sm:py-24 md:py-28 lg:py-32 xl:py-36 bg-white px-4 sm:px-6 lg:px-8 section-fade-in">
-      <div className="max-w-5xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-12 md:gap-16">
-          {values.map((value, index) => (
+    <section id="values" className="py-12 sm:py-16 md:py-20 bg-white px-4 sm:px-6 lg:px-8 section-fade-in border-t border-[#111111]/10">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12">
+          {features.map((feature, index) => (
             <div
               key={index}
-              className="text-center"
+              className="text-center flex flex-col items-center"
             >
-              <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3 sm:mb-4 leading-tight">
-                {value.title}
+              <div className="w-2 h-2 rounded-full bg-gray-400 mb-4" />
+              <h3 className="text-base sm:text-lg font-medium text-gray-600 leading-tight">
+                {feature.title}
               </h3>
-              <p className="text-base sm:text-lg text-gray-500 leading-relaxed">
-                {value.description}
-              </p>
             </div>
           ))}
         </div>

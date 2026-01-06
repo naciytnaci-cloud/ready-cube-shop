@@ -25,15 +25,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([])
 
   const addItem = (item: Omit<CartItem, 'quantity'>) => {
-    setItems((prevItems) => {
-      const existingItem = prevItems.find((i) => i.id === item.id)
-      if (existingItem) {
-        return prevItems.map((i) =>
-          i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
-        )
-      }
-      return [...prevItems, { ...item, quantity: 1 }]
-    })
+    // Single-product cart: max 1 item, quantity fixed = 1
+    setItems([{ ...item, quantity: 1 }])
   }
 
   const removeItem = (id: string) => {
@@ -41,12 +34,13 @@ export function CartProvider({ children }: { children: ReactNode }) {
   }
 
   const updateQuantity = (id: string, quantity: number) => {
+    // Quantity is fixed to 1 in single-product flow.
     if (quantity <= 0) {
       removeItem(id)
       return
     }
     setItems((prevItems) =>
-      prevItems.map((item) => (item.id === id ? { ...item, quantity } : item))
+      prevItems.map((item) => (item.id === id ? { ...item, quantity: 1 } : item))
     )
   }
 
@@ -55,7 +49,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
   }
 
   const getItemCount = () => {
-    return items.reduce((sum, item) => sum + item.quantity, 0)
+    // Count is capped to 1 in single-product flow.
+    return items.length > 0 ? 1 : 0
   }
 
   return (

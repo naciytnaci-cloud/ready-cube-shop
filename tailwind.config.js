@@ -7,15 +7,35 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // Brand system (semantic tokens)
+        brand: {
+          DEFAULT: '#E10600', // main brand color
+          hover: '#C70500',   // subtle darken on hover
+          soft: '#FFE8E7',    // optional subtle accent background (tint)
+        },
+        ink: {
+          DEFAULT: '#111111', // dark neutral / near-black
+          soft: '#1A1A1A',
+        },
+        surface: {
+          DEFAULT: '#F5F5F5', // light background for alternating sections
+          soft: '#EFEFEF',
+        },
+
+        // Backward compatible aliases (existing usage in codebase)
         primary: {
           DEFAULT: '#E10600',
           dark: '#B80500',
           light: '#FF1A0D',
         },
         dark: {
-          DEFAULT: '#0B0B0B',
+          DEFAULT: '#111111',
           light: '#1A1A1A',
-          lighter: '#252525',
+          lighter: '#262626',
+        },
+        neutralSurface: {
+          DEFAULT: '#F5F5F5',
+          light: '#EFEFEF',
         },
       },
       fontFamily: {

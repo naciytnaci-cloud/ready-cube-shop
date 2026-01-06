@@ -2,16 +2,22 @@ import type { Metadata } from 'next'
 import Navbar from '@/components/Navbar'
 import HeroSection from '@/components/HeroSection'
 import ValueSection from '@/components/ValueSection'
-import BrandStorySection from '@/components/BrandStorySection'
-import ShopCTASection from '@/components/ShopCTASection'
+import FeaturedCubesSection from '@/components/FeaturedCubesSection'
+import ProductBenefitsSection from '@/components/ProductBenefitsSection'
+import ProductDetailsSection from '@/components/ProductDetailsSection'
+import TrustShippingPaymentSection from '@/components/TrustShippingPaymentSection'
+import FeaturedProductSection from '@/components/FeaturedProductSection'
+import ComingSoonSection from '@/components/ComingSoonSection'
+import FinalCTASection from '@/components/FinalCTASection'
+import PreLaunchChecklistSection from '@/components/PreLaunchChecklistSection'
 import SimpleFooter from '@/components/SimpleFooter'
 
 export const metadata: Metadata = {
   title: 'Ready Cube - Speedcubing Ekipmanları',
-  description: 'İlk ürünümüz: Ready Cube Backpack. Speedcubing topluluğu için özenle tasarlanmış çanta. Yakında satışta.',
+  description: 'Yarışma ve günlük kullanım için premium ekipmanlar.',
   openGraph: {
-    title: 'Ready Cube - İlk Ürünümüz: Ready Cube Backpack',
-    description: 'Speedcubing topluluğu için özenle tasarlanmış ilk ürünümüz. Yakında satışta.',
+    title: 'Ready Cube',
+    description: 'Yarışma ve günlük kullanım için premium ekipmanlar.',
     type: 'website',
   },
 }
@@ -22,8 +28,14 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <ValueSection />
-      <BrandStorySection />
-      <ShopCTASection />
+      <FeaturedCubesSection />
+      <ProductBenefitsSection />
+      <ProductDetailsSection />
+      <TrustShippingPaymentSection />
+      <FeaturedProductSection />
+      <ComingSoonSection />
+      <FinalCTASection />
+      {process.env.NODE_ENV === 'development' && <PreLaunchChecklistSection />}
       <SimpleFooter />
     </div>
   )

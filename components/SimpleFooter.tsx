@@ -1,70 +1,62 @@
+'use client'
+
+import Link from 'next/link'
+
 export default function SimpleFooter() {
   const currentYear = new Date().getFullYear()
-  
+
   return (
-    <footer id="contact" className="bg-white border-t border-gray-200 py-8 sm:py-10 px-4 sm:px-6 lg:px-8 section-fade-in">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center space-y-6">
-          <div>
-            <p className="text-gray-900 text-sm sm:text-base font-medium mb-1">
+    <footer className="bg-dark text-white border-t border-white/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
+          {/* Brand */}
+          <div className="space-y-2">
+            <div className="text-base sm:text-lg font-semibold tracking-tight">
               Ready Cube
-            </p>
-            <p className="text-gray-500 text-xs sm:text-sm">
-              Speedcubing ekipmanları
-            </p>
-          </div>
-
-          {/* Contact Info */}
-          <div className="pt-4 border-t border-gray-100 space-y-3">
-            <div>
-              <p className="text-gray-500 text-xs sm:text-sm mb-1">
-                İletişim
-              </p>
-              <a
-                href="mailto:iletisim@readycube.shop"
-                className="text-gray-600 text-xs sm:text-sm hover:text-gray-900 transition-colors duration-200"
-              >
-                iletisim@readycube.shop
-              </a>
             </div>
-          </div>
-
-          {/* Trust Notes */}
-          <div className="pt-4 border-t border-gray-100 space-y-2">
-            <p className="text-gray-500 text-xs sm:text-sm leading-relaxed">
-              Ready Cube bireysel bir projedir.
-            </p>
-            <p className="text-gray-500 text-xs sm:text-sm leading-relaxed">
-              Satışlar açılmadan önce gerekli bilgiler eklenecektir.
+            <p className="text-sm text-gray-300 max-w-md">
+              Speedcubing için tasarlandı.
             </p>
           </div>
 
-          {/* Growth Signals */}
-          <div className="pt-4 border-t border-gray-100 space-y-2">
-            <p className="text-gray-400 text-xs sm:text-sm">
-              Yeni ürünler yolda
-            </p>
-            <p className="text-gray-400 text-xs sm:text-sm">
-              Topluluktan gelen geri bildirimlerle geliştiriliyor
-            </p>
-          </div>
+          {/* Links */}
+          <nav className="flex flex-col sm:flex-row gap-3 sm:gap-6 text-sm">
+            <Link
+              href="#"
+              onClick={(e) => e.preventDefault()}
+              className="text-gray-300 hover:text-white rc-underline rc-underline-brand transition-colors duration-200 ease-out cursor-default"
+              style={{ textUnderlineOffset: '4px' }}
+              aria-disabled="true"
+            >
+              Kargo
+              <span className="ml-1.5 text-xs text-gray-500 font-normal">(Yakında)</span>
+            </Link>
+            <Link
+              href="/contact"
+              className="text-gray-300 hover:text-white rc-underline rc-underline-brand transition-colors duration-200 ease-out"
+              style={{ textUnderlineOffset: '4px' }}
+            >
+              İletişim
+            </Link>
+            <Link
+              href="#"
+              onClick={(e) => e.preventDefault()}
+              className="text-gray-300 hover:text-white rc-underline rc-underline-brand transition-colors duration-200 ease-out cursor-default"
+              style={{ textUnderlineOffset: '4px' }}
+              aria-disabled="true"
+            >
+              Gizlilik
+              <span className="ml-1.5 text-xs text-gray-500 font-normal">(Yakında)</span>
+            </Link>
+          </nav>
+        </div>
 
-          {/* Brand Message */}
-          <div className="pt-4 border-t border-gray-100">
-            <p className="text-gray-500 text-xs sm:text-sm font-medium mb-2">
-              Ready Cube — Speedcubers for speedcubers.
-            </p>
-          </div>
-
-          {/* Copyright */}
-          <div className="pt-2">
-            <p className="text-gray-400 text-xs sm:text-sm">
-              © {currentYear} Ready Cube. Tüm hakları saklıdır.
-            </p>
-          </div>
+        <div className="mt-10 pt-6 border-t border-white/10">
+          <p className="text-xs text-gray-400">
+            © {currentYear} Ready Cube — Türkiye
+          </p>
         </div>
       </div>
     </footer>
   )
 }
-

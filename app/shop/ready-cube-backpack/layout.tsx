@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Ready Cube Premium Speedcubing Backpack',
-  description: 'Speedcubing için özel tasarlanmış premium çanta. 2x2\'den 7x7\'ye tüm WCA küplerine uyum, özel süngerli iç düzen, laptop ve şarj alanı.',
+  title: 'Ready Cube Bag',
+  description: 'Speedcubing ekipmanları için premium taşıma çantası. Yakında satışta.',
   openGraph: {
-    title: 'Ready Cube Premium Speedcubing Backpack | Ready Cube',
-    description: 'Speedcubing için özel tasarlanmış premium çanta.',
+    title: 'Ready Cube Bag | Ready Cube',
+    description: 'Speedcubing ekipmanları için premium taşıma çantası.',
     type: 'website',
   },
 }
