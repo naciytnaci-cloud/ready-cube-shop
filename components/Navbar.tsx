@@ -4,12 +4,13 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useCart } from '@/contexts/CartContext'
+import { SALES_ENABLED } from '@/lib/publicConfig'
 
 const navItems = [
   { name: 'Ana Sayfa', href: '/' },
   { name: 'Çanta', href: '/shop' },
   { name: 'WCA Küpleri', href: '#', comingSoon: true },
-  { name: 'Hakkımızda', href: '#', comingSoon: false },
+  { name: 'Hakkımızda', href: '/about', comingSoon: false },
 ]
 
 export default function Navbar() {
@@ -79,9 +80,15 @@ export default function Navbar() {
 
           {/* RIGHT — Status / CTA */}
           <div className="hidden md:flex items-center gap-6">
-            <span className="text-xs sm:text-sm text-gray-500 font-normal">
-              Satışlar Yakında
-            </span>
+            {!SALES_ENABLED ? (
+              <span className="text-xs sm:text-sm text-gray-500 font-normal">
+                Satışlar Yakında
+              </span>
+            ) : (
+              <span className="text-xs sm:text-sm text-emerald-700 font-medium">
+                Satışta
+              </span>
+            )}
             <Link
               href="/cart"
               className="relative text-dark hover:opacity-80 transition-opacity duration-200 ease-out min-h-[44px] min-w-[44px] flex items-center justify-center"
@@ -214,9 +221,11 @@ export default function Navbar() {
             )
           })}
           <div className="pt-2 px-3">
-            <span className="text-xs text-gray-500 font-normal">
-              Satışlar Yakında
-            </span>
+            {!SALES_ENABLED ? (
+              <span className="text-xs text-gray-500 font-normal">Satışlar Yakında</span>
+            ) : (
+              <span className="text-xs text-emerald-700 font-medium">Satışta</span>
+            )}
           </div>
         </div>
       </div>

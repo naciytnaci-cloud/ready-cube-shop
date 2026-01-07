@@ -1,10 +1,14 @@
 import { NextResponse } from 'next/server'
 import crypto from 'crypto'
 import { sendEmail } from '@/lib/email/smtp'
+import { assertProductionSafe, getIyzicoBaseUrl } from '@/lib/iyzico/server'
 
 // iyzico Checkout Form will POST token/paymentStatus to this callback.
 // Flow: verify payment -> generate order no -> send confirmation email -> redirect to success/failed page.
 export async function POST(req: Request) {
+  // Prevent accidental sandbox payments on production
+  assertProductionSafe()
+
   const form = await req.formData()
   const token = String(form.get('token') || '')
   const paymentStatus = String(form.get('paymentStatus') || '')
@@ -20,7 +24,7 @@ export async function POST(req: Request) {
   // Verify payment with iyzico (sandbox/live based on env)
   const apiKey = process.env.IYZICO_API_KEY
   const secretKey = process.env.IYZICO_SECRET_KEY
-  const iyzicoBase = process.env.IYZICO_BASE_URL || 'https://sandbox-api.iyzipay.com'
+  const iyzicoBase = getIyzicoBaseUrl()
 
   let verifiedStatus = paymentStatus
   let buyerEmail = ''

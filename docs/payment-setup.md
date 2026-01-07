@@ -1,4 +1,4 @@
-# Ödeme Kurulumu (iyzico – Sandbox)
+# Ödeme Kurulumu (iyzico)
 
 Bu proje **iyzico Checkout Form** yaklaşımıyla (3D Secure dahil) hazırlanmıştır.
 
@@ -10,11 +10,14 @@ Uygulamayı çalıştırmadan önce aşağıdaki değişkenleri `.env.local` dos
 # Public (client tarafında da kullanılır)
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
 NEXT_PUBLIC_PRODUCT_PRICE_TRY=199.99
+NEXT_PUBLIC_SALES_ENABLED=true
 
-# iyzico (Sandbox)
-IYZICO_BASE_URL=https://sandbox-api.iyzipay.com
-IYZICO_API_KEY=YOUR_SANDBOX_API_KEY
-IYZICO_SECRET_KEY=YOUR_SANDBOX_SECRET_KEY
+# iyzico
+# - sandbox: test ödemeleri
+# - live: gerçek ödemeler
+IYZICO_MODE=sandbox
+IYZICO_API_KEY=YOUR_API_KEY
+IYZICO_SECRET_KEY=YOUR_SECRET_KEY
 
 # Shipping (Türkiye içi)
 NEXT_PUBLIC_SHIPPING_FLAT_TRY=79
@@ -42,7 +45,8 @@ SMTP_FROM=Ready Cube <no-reply@readycube.shop>
 ## Notlar
 
 - `NEXT_PUBLIC_PRODUCT_PRICE_TRY` değeri **0** ise ödeme başlatma butonu pasif kalır.
-- Bu kurulum **sandbox** içindir. Canlıya geçerken iyzico tarafından sağlanan canlı anahtarları kullanın.
+- Production’da **gerçek ödeme** için: `IYZICO_MODE=live` + canlı anahtarlar.
+- Production build’de `IYZICO_MODE` live değilse API hata verir (yanlışlıkla sandbox ile canlıya çıkmayı engellemek için).
 - SMTP env’leri tanımlıysa sipariş onayı e-postası gönderilir; değilse sistem sessizce pas geçer.
 
 

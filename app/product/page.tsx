@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import SimpleFooter from '@/components/SimpleFooter'
 import BuyNowButton from '@/components/BuyNowButton'
+import { formatTryAmount, PRODUCT_PRICE_TRY, SALES_ENABLED } from '@/lib/publicConfig'
 
 export default function Product() {
   const details = [
@@ -58,8 +59,14 @@ export default function Product() {
 
           {/* Info */}
           <div className="flex flex-col">
-            <div className="inline-flex items-center self-start bg-brand-soft text-brand border border-[#111111]/10 text-xs font-semibold px-3 py-1.5 rounded-full">
-              Yakında
+            <div
+              className={`inline-flex items-center self-start border text-xs font-semibold px-3 py-1.5 rounded-full ${
+                SALES_ENABLED && PRODUCT_PRICE_TRY > 0
+                  ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                  : 'bg-brand-soft text-brand border-[#111111]/10'
+              }`}
+            >
+              {SALES_ENABLED && PRODUCT_PRICE_TRY > 0 ? 'Satışta' : 'Yakında'}
             </div>
             <h1 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-semibold text-dark tracking-tight leading-tight">
               Ready Cube Bag
@@ -71,14 +78,14 @@ export default function Product() {
             <div className="mt-6">
               <div className="text-sm text-gray-500">Fiyat</div>
               <div className="mt-1 text-2xl font-semibold text-dark">
-                Yakında
+                {formatTryAmount(PRODUCT_PRICE_TRY)}
               </div>
             </div>
 
             <div className="mt-8">
               <BuyNowButton className="inline-flex items-center justify-center w-full sm:w-auto px-10 py-4 bg-brand hover:bg-brand-hover active:bg-brand-hover text-white font-semibold rounded-md transition-colors duration-200 ease-out min-h-[48px] touch-manipulation btn-active-feedback" />
               <p className="mt-3 text-sm text-gray-500">
-                Satışlar yakında açılıyor.
+                {SALES_ENABLED ? 'Güvenli ödeme (iyzico) ve Türkiye içi gönderim.' : 'Satışlar yakında açılıyor.'}
               </p>
             </div>
 

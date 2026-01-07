@@ -1,4 +1,7 @@
-import Link from 'next/link'
+'use client'
+
+import BuyNowButton from '@/components/BuyNowButton'
+import { SALES_ENABLED } from '@/lib/publicConfig'
 
 export default function FinalCTASection() {
   return (
@@ -13,15 +16,11 @@ export default function FinalCTASection() {
         </h2>
 
         <div className="mt-10">
-          <button
-            disabled
-            className="inline-flex items-center justify-center w-full sm:w-auto px-10 py-4 sm:py-5 bg-brand text-white font-semibold rounded-md transition-colors duration-200 ease-out text-base sm:text-lg sm:min-w-[220px] min-h-[48px] sm:min-h-[56px] cursor-not-allowed opacity-40"
-            aria-label="Satın Al (Yakında)"
-          >
-            Satın Al
-          </button>
+          <BuyNowButton
+            className="inline-flex items-center justify-center w-full sm:w-auto px-10 py-4 sm:py-5 bg-brand hover:bg-brand-hover active:bg-brand-hover text-white font-semibold rounded-md transition-colors duration-200 ease-out text-base sm:text-lg sm:min-w-[220px] min-h-[48px] sm:min-h-[56px] touch-manipulation btn-active-feedback"
+          />
           <p className="mt-3 text-sm text-gray-500">
-            Satışlar yakında açılıyor.
+            {SALES_ENABLED ? 'Güvenli ödeme ve hızlı gönderim.' : 'Satışlar yakında açılıyor.'}
           </p>
         </div>
       </div>

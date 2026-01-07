@@ -20,16 +20,34 @@ export default function SimpleFooter() {
           </div>
 
           {/* Links */}
-          <nav className="flex flex-col sm:flex-row gap-3 sm:gap-6 text-sm">
+          <nav className="flex flex-wrap gap-x-6 gap-y-3 text-sm">
             <Link
-              href="#"
-              onClick={(e) => e.preventDefault()}
-              className="text-gray-300 hover:text-white rc-underline rc-underline-brand transition-colors duration-200 ease-out cursor-default"
+              href="/privacy"
+              className="text-gray-300 hover:text-white rc-underline rc-underline-brand transition-colors duration-200 ease-out"
               style={{ textUnderlineOffset: '4px' }}
-              aria-disabled="true"
             >
-              Kargo
-              <span className="ml-1.5 text-xs text-gray-500 font-normal">(Yakında)</span>
+              Gizlilik
+            </Link>
+            <Link
+              href="/kvkk"
+              className="text-gray-300 hover:text-white rc-underline rc-underline-brand transition-colors duration-200 ease-out"
+              style={{ textUnderlineOffset: '4px' }}
+            >
+              KVKK
+            </Link>
+            <Link
+              href="/distance-sales-contract"
+              className="text-gray-300 hover:text-white rc-underline rc-underline-brand transition-colors duration-200 ease-out"
+              style={{ textUnderlineOffset: '4px' }}
+            >
+              Mesafeli Satış
+            </Link>
+            <Link
+              href="/terms"
+              className="text-gray-300 hover:text-white rc-underline rc-underline-brand transition-colors duration-200 ease-out"
+              style={{ textUnderlineOffset: '4px' }}
+            >
+              Kullanım Koşulları
             </Link>
             <Link
               href="/contact"
@@ -37,16 +55,6 @@ export default function SimpleFooter() {
               style={{ textUnderlineOffset: '4px' }}
             >
               İletişim
-            </Link>
-            <Link
-              href="#"
-              onClick={(e) => e.preventDefault()}
-              className="text-gray-300 hover:text-white rc-underline rc-underline-brand transition-colors duration-200 ease-out cursor-default"
-              style={{ textUnderlineOffset: '4px' }}
-              aria-disabled="true"
-            >
-              Gizlilik
-              <span className="ml-1.5 text-xs text-gray-500 font-normal">(Yakında)</span>
             </Link>
           </nav>
         </div>

@@ -12,14 +12,17 @@
 - ✅ No linting errors
 
 ### Pages Verified
-- ✅ `/` - Home page
-- ✅ `/cantalar` - Bags listing
-- ✅ `/cantalar/ready-cube-backpack` - Product detail
-- ✅ `/about` - About page
-- ✅ `/contact` - Contact page
-- ✅ `/shop` - Shop page
-- ✅ `/shop/cubes` - Coming soon page
-- ✅ Footer - All links functional
+- ✅ `/` - Ana sayfa
+- ✅ `/shop` - Tek ürün mağaza sayfası
+- ✅ `/product` - Ürün detay
+- ✅ `/cart` - Sepet
+- ✅ `/checkout` - Checkout
+- ✅ `/checkout/pay` - iyzico form sayfası
+- ✅ `/order/success` - Sipariş başarılı
+- ✅ `/order/failed` - Sipariş başarısız
+- ✅ `/about` - Hakkımızda
+- ✅ `/contact` - İletişim
+- ✅ Footer - Linkler ve yerleşim
 
 ### Configuration Files
 - ✅ `vercel.json` - Deployment config created
@@ -66,27 +69,23 @@ git push origin main
 - [ ] Footer visible
 
 #### Navigation
-- [ ] Header links work (Home, Çantalar, Hakkımızda)
+- [ ] Header linkleri çalışıyor (Ana Sayfa, Çanta, Hakkımızda)
 - [ ] Mobile menu opens/closes smoothly
 - [ ] Language switcher functional (TR/EN)
 - [ ] Sticky header works correctly
 
-#### Shop Pages
-- [ ] `/cantalar` page loads with product grid
-- [ ] Product cards have hover effects (desktop)
-- [ ] Product cards have tap feedback (mobile)
-- [ ] `/cantalar/ready-cube-backpack` detail page loads
+#### Shop / Product
+- [ ] `/shop` sayfası yükleniyor
+- [ ] `/product` sayfası yükleniyor
+- [ ] Badge doğru: Satışta / Yakında
+- [ ] Fiyat doğru görünüyor
 
-#### Product Detail Page
-- [ ] Breadcrumb navigation works
-- [ ] Back to shop button functional
-- [ ] All sections display:
-  - [ ] Hero section (image + info)
-  - [ ] Features section
-  - [ ] Interior design section
-  - [ ] Status & delivery section
-  - [ ] Payment form placeholder
-- [ ] Payment form clearly shows "coming soon"
+#### Checkout / Payment
+- [ ] `/checkout` form alanları doğru (Ad, Soyad, Telefon, E‑posta, T.C. Kimlik No, Adres, Şehir, Posta Kodu)
+- [ ] Kargo ücreti doğru hesaplanıyor
+- [ ] Ödemeye Geç → iyzico formu açılıyor (`/checkout/pay`)
+- [ ] Callback sonrası success/failed sayfaları çalışıyor
+- [ ] Başarılı sayfada sipariş no görünüyor
 
 #### About Page
 - [ ] All sections display correctly
@@ -167,10 +166,41 @@ After deployment:
 - Verify all routes exist in `app/` directory
 - Check `next.config.js` for redirects
 
-## Notes
+## Production Launch Checklist (Ödeme Açmadan Önce)
 
-- **No Backend Required:** Static site with client-side state
-- **No Environment Variables:** No API keys needed
-- **Image Optimization:** Automatic via Next.js Image
-- **CDN:** Global CDN provided by Vercel
+### Payment Live Mode
+- [ ] `IYZICO_MODE=live`
+- [ ] `IYZICO_API_KEY` ve `IYZICO_SECRET_KEY` canlı anahtarlar
+- [ ] `NEXT_PUBLIC_SITE_URL` production domain
+
+### Correct Price
+- [ ] `NEXT_PUBLIC_PRODUCT_PRICE_TRY` gerçek fiyat
+- [ ] `/shop` + `/product` fiyat eşleşiyor
+
+### Correct Shipping
+- [ ] `NEXT_PUBLIC_SHIPPING_FLAT_TRY` doğru
+- [ ] `NEXT_PUBLIC_SHIPPING_FREE_OVER_TRY` doğru (kullanılmıyorsa 0)
+- [ ] `/cart` + `/checkout` toplam hesapları doğru
+
+### Sales Switch
+- [ ] `NEXT_PUBLIC_SALES_ENABLED=true`
+- [ ] Navbar “Satışta” gösteriyor
+- [ ] Butonlar aktif (Satın Al / Ödemeye Geç)
+
+### No Test Data
+- [ ] iyzico initialize içinde hardcoded IP / TCKN yok
+- [ ] Checkout’ta **T.C. Kimlik No** alanı mevcut ve 11 haneli doğrulanıyor
+- [ ] UI’da “sandbox” metni yok
+
+### Email (Opsiyonel ama önerilir)
+- [ ] SMTP env’leri set (`SMTP_HOST/PORT/...`)
+- [ ] 1 başarılı ödeme sonrası sipariş onayı e-postası geliyor
+
+## Final Test (1 gerçek sipariş)
+
+1. Production ortamında (veya canlıya çok yakın staging’de) `IYZICO_MODE=live` + gerçek domain ile checkout’u açın.
+2. Kendi kartınızla **1 adet gerçek sipariş** geçin (gerekirse hemen iade/iptal planlayın).
+3. Success sayfasında sipariş no kontrol edin.
+4. E‑posta geldiyse içerik: ürün + tutar + kargo bilgisi + destek adresi.
+5. **Mobil + desktop**: Home → Shop/Product → Cart → Checkout → Pay → Success akışı test edin.
 

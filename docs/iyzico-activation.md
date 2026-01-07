@@ -127,7 +127,7 @@ After account approval, you'll receive:
 
 - **API Key** (Public key)
 - **Secret Key** (Private key - keep secure!)
-- **Base URL** (Test: `https://sandbox-api.iyzipay.com`, Production: `https://api.iyzipay.com`)
+- **Environment**: Test (sandbox) / Production (live)
 
 ### 4.2 Environment Variables Setup
 
@@ -135,41 +135,28 @@ Create/update `.env.local` file:
 
 ```env
 # iyzico Configuration
+IYZICO_MODE=sandbox
 IYZICO_API_KEY=your_api_key_here
 IYZICO_SECRET_KEY=your_secret_key_here
-IYZICO_BASE_URL=https://sandbox-api.iyzipay.com  # Test environment
-# IYZICO_BASE_URL=https://api.iyzipay.com  # Production (uncomment when ready)
 ```
 
 ### 4.3 Code Integration Points
 
-#### 4.3.1 Update Payment Configuration
+#### 4.3.1 Payment Configuration
 
-File: `/lib/payments/iyzico-config.ts` (create if doesn't exist)
+File: `/lib/iyzico/server.ts`
 
 ```typescript
-export const iyzicoConfig = {
-  apiKey: process.env.IYZICO_API_KEY!,
-  secretKey: process.env.IYZICO_SECRET_KEY!,
-  baseUrl: process.env.IYZICO_BASE_URL || 'https://api.iyzipay.com',
-}
+// Base URL is derived from IYZICO_MODE:
+// - sandbox -> https://sandbox-api.iyzipay.com
+// - live -> https://api.iyzipay.com
 ```
 
-#### 4.3.2 Replace Mock Implementation
+#### 4.3.2 Checkout Form Flow
 
-File: `/lib/payments/iyzico-mock.ts`
-
-- Replace `simulateIyzicoPayment()` with real iyzico API calls
-- Use iyzico Node.js SDK: `npm install iyzipay`
-- Implement actual payment processing logic
-
-#### 4.3.3 Update Checkout Flow
-
-File: `/app/checkout/page.tsx` (create when ready)
-
-- Integrate iyzico payment form
-- Handle payment callbacks
-- Update order status based on payment result
+- Initialize: `/api/payments/iyzico/initialize`
+- Callback: `/api/payments/iyzico/callback`
+- Pay page: `/checkout/pay` renders iyzico base64 HTML content
 
 ### 4.4 Security Best Practices
 
@@ -250,7 +237,7 @@ Complete this checklist before going live with payments:
 ### 6.1 Final Checks
 
 1. Switch to production API keys
-2. Update `IYZICO_BASE_URL` to production
+2. Set `IYZICO_MODE=live`
 3. Verify SSL certificate
 4. Test one real transaction (small amount)
 5. Verify funds received in bank account

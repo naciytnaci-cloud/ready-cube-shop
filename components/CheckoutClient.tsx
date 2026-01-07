@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { useCart } from '@/contexts/CartContext'
 import { getShipping, formatTry, SHIPPING_CARRIERS } from '@/lib/shipping'
+import { SALES_ENABLED } from '@/lib/publicConfig'
 
 export default function CheckoutClient() {
   const { items } = useCart()
@@ -79,6 +80,7 @@ export default function CheckoutClient() {
                   className="mt-6 space-y-5"
                   onSubmit={async (e) => {
                     e.preventDefault()
+                    if (!SALES_ENABLED) return
                     const fd = new FormData(e.currentTarget)
                     const price = Number(process.env.NEXT_PUBLIC_PRODUCT_PRICE_TRY || '0')
                     if (!price) return
@@ -91,6 +93,7 @@ export default function CheckoutClient() {
                       address: String(fd.get('address') || ''),
                       city: String(fd.get('city') || ''),
                       postalCode: String(fd.get('postalCode') || ''),
+                      identityNumber: String(fd.get('identityNumber') || ''),
                     }
 
                     const res = await fetch('/api/payments/iyzico/initialize', {
@@ -162,6 +165,25 @@ export default function CheckoutClient() {
                   </div>
 
                   <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      T.C. Kimlik No
+                    </label>
+                    <input
+                      type="text"
+                      name="identityNumber"
+                      inputMode="numeric"
+                      pattern="[0-9]{11}"
+                      maxLength={11}
+                      required={SALES_ENABLED}
+                      className="w-full px-4 py-3 bg-white border border-[#111111]/15 rounded-md text-dark placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand/40"
+                      placeholder="11 haneli"
+                    />
+                    <p className="mt-2 text-xs text-gray-500">
+                      Ödeme sağlayıcısı doğrulaması için gereklidir.
+                    </p>
+                  </div>
+
+                  <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Adres</label>
                     <textarea
                       name="address"
@@ -203,19 +225,26 @@ export default function CheckoutClient() {
                     <button
                       type="submit"
                       className={`inline-flex items-center justify-center w-full px-8 py-4 bg-brand text-white font-semibold rounded-md min-h-[48px] touch-manipulation btn-active-feedback transition-colors duration-200 ease-out ${
-                        item?.price ? 'hover:bg-brand-hover active:bg-brand-hover' : 'opacity-40 cursor-not-allowed'
+                        item?.price && SALES_ENABLED
+                          ? 'hover:bg-brand-hover active:bg-brand-hover'
+                          : 'opacity-40 cursor-not-allowed'
                       }`}
-                      disabled={!item?.price}
+                      disabled={!item?.price || !SALES_ENABLED}
                       aria-label="Ödemeye geç"
                     >
                       Ödemeye Geç
                     </button>
                     <p className="mt-3 text-sm text-gray-500">
-                      Ödeme altyapısı: iyzico (sandbox). 3D Secure aktif.
+                      Ödeme altyapısı: iyzico. 3D Secure aktif.
                     </p>
                     <p className="mt-2 text-sm text-gray-500">
                       Türkiye içi gönderim. Taşıyıcı: {SHIPPING_CARRIERS.join(' / ')}.
                     </p>
+                    {!SALES_ENABLED && (
+                      <p className="mt-2 text-sm text-gray-600">
+                        Satışlar şu an kapalı.
+                      </p>
+                    )}
                   </div>
                 </form>
               </div>

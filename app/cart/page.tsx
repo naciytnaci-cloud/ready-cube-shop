@@ -6,6 +6,7 @@ import Navbar from '@/components/Navbar'
 import SimpleFooter from '@/components/SimpleFooter'
 import { useCart } from '@/contexts/CartContext'
 import { getShipping, formatTry, SHIPPING_CARRIERS } from '@/lib/shipping'
+import { SALES_ENABLED } from '@/lib/publicConfig'
 
 export default function CartPage() {
   const { items, removeItem } = useCart()
@@ -14,6 +15,9 @@ export default function CartPage() {
   const shipping = getShipping(subtotal)
   const total =
     shipping.status === 'unknown' ? 0 : subtotal + (shipping.status === 'paid' ? shipping.cost : 0)
+  const canCheckout = Boolean(
+    SALES_ENABLED && subtotal > 0 && shipping.status !== 'unknown'
+  )
 
   return (
     <div className="min-h-screen bg-white">
@@ -108,11 +112,24 @@ export default function CartPage() {
               </div>
 
               <Link
-                href="/checkout"
-                className="mt-8 inline-flex items-center justify-center w-full px-8 py-4 bg-dark text-white font-semibold rounded-md hover:opacity-90 transition-opacity duration-200 ease-out min-h-[48px] touch-manipulation btn-active-feedback"
+                href={canCheckout ? '/checkout' : '#'}
+                onClick={(e) => {
+                  if (!canCheckout) e.preventDefault()
+                }}
+                className={`mt-8 inline-flex items-center justify-center w-full px-8 py-4 font-semibold rounded-md transition-opacity duration-200 ease-out min-h-[48px] touch-manipulation btn-active-feedback ${
+                  canCheckout
+                    ? 'bg-dark text-white hover:opacity-90'
+                    : 'bg-[#111111]/10 text-gray-500 cursor-not-allowed'
+                }`}
+                aria-disabled={!canCheckout}
               >
                 Checkout’a Devam Et
               </Link>
+              {!canCheckout && (
+                <p className="mt-3 text-sm text-gray-600">
+                  Satışlar şu an kapalı veya fiyat/kargo bilgisi hazır değil.
+                </p>
+              )}
               <p className="mt-3 text-sm text-gray-500">
                 Türkiye içi gönderim. Taşıyıcı: {SHIPPING_CARRIERS.join(' / ')}.
               </p>
