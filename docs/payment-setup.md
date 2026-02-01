@@ -49,4 +49,25 @@ SMTP_FROM=Ready Cube <no-reply@readycube.shop>
 - Production build’de `IYZICO_MODE` live değilse API hata verir (yanlışlıkla sandbox ile canlıya çıkmayı engellemek için).
 - SMTP env’leri tanımlıysa sipariş onayı e-postası gönderilir; değilse sistem sessizce pas geçer.
 
+## Stripe Payment Link (PDF dijital ürün)
+
+F2L PDF için backend kullanmadan Stripe Payment Link akışı kullanılır.
+
+### Stripe tarafı (test modu)
+
+- Ürün adı: **3x3 F2L Yeni Başlayanlar Rehberi (PDF)**
+- Fiyat: **0.50 USD**
+- Product type: **Digital product** (kargo/adres istemez)
+- Checkout: **Collect customer email** açık olmalı
+- Success URL: `https://readycube.site/pdf/success` (lokalde `http://localhost:3000/pdf/success`)
+- Cancel URL: `https://readycube.site/pdf/3x3-f2l-yeni-baslayanlar`
+
+Oluşturduğunuz Payment Link'i `.env.local` dosyasına ekleyin:
+
+```bash
+NEXT_PUBLIC_STRIPE_PDF_PAYMENT_LINK=https://buy.stripe.com/test_XXXXXXXXXXXXXXXXXXXX
+```
+
+Not: Canlıya çıkarken Stripe dashboard'da canlı moda geçip yeni bir Payment Link üretin.
+
 

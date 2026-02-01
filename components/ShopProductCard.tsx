@@ -16,7 +16,7 @@ export default function ShopProductCard({ id, name, price, image }: ShopProductC
       <div className="aspect-square bg-gray-100 relative overflow-hidden">
         <Image
           src={image || `/products/${id}.jpg`}
-          alt={`${name} - Premium speedcube product image`}
+          alt={`${name} - Ürün görseli`}
           fill
           className="object-cover group-hover:scale-110 transition-transform duration-300 ease-out"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -41,7 +41,7 @@ export default function ShopProductCard({ id, name, price, image }: ShopProductC
                 />
               </svg>
             </div>
-            <p className="text-gray-400 text-xs">Product Image</p>
+            <p className="text-gray-400 text-xs">Ürün Görseli</p>
           </div>
         </div>
       </div>
@@ -59,7 +59,7 @@ export default function ShopProductCard({ id, name, price, image }: ShopProductC
         
         {/* Action Button */}
         <div className="w-full bg-gray-900 text-white py-2.5 px-4 rounded-md font-medium text-sm text-center hover:bg-gray-700 transition-colors duration-150 ease-out">
-          View Product
+          Ürünü Gör
         </div>
       </div>
     </div>

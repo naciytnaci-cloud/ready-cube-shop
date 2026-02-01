@@ -12,7 +12,7 @@ export default function ShopPage() {
         {/* Page Title */}
         <div className="mb-12 sm:mb-16 md:mb-20 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-dark tracking-tight leading-tight">
-            Shop
+            Mağaza
           </h1>
           <p className="mt-3 text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
             Tek ürün. Net odak.
@@ -45,10 +45,10 @@ export default function ShopPage() {
               </div>
 
               <h2 className="mt-4 text-2xl sm:text-3xl font-semibold text-dark tracking-tight">
-                Ready Cube Bag
+                Ready Cube Çanta
               </h2>
               <p className="mt-3 text-base text-gray-600 leading-relaxed">
-                Speedcubing ekipmanları için premium taşıma çantası.
+                Hızlı küp ekipmanları için üst seviye taşıma çantası.
               </p>
 
               <div className="mt-6">

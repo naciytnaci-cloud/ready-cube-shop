@@ -16,10 +16,10 @@ export default function FeaturedProductSection() {
             className="block bg-white border border-[#111111]/10 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-[2px] transition-all duration-200 ease-out p-10 sm:p-12 md:p-14 lg:p-16 group"
           >
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-5 tracking-tight leading-tight">
-              Ready Cube Bag
+              Ready Cube Çanta
             </h3>
             <p className="text-base sm:text-lg text-gray-500 mb-6 sm:mb-8 leading-relaxed">
-              Speedcubing için özel tasarlanmış çanta.
+              Hızlı küp için özel tasarlanmış çanta.
             </p>
             <span className="inline-flex items-center text-base sm:text-lg text-gray-900 font-medium rc-underline rc-underline-brand transition-colors duration-200 ease-out" style={{ textUnderlineOffset: '4px' }}>
               Ürünü İncele →

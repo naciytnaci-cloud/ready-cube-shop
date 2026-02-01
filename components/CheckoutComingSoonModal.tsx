@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
-import { useLanguage } from '@/contexts/LanguageContext'
 
 interface CheckoutComingSoonModalProps {
   isOpen: boolean
@@ -14,7 +13,6 @@ export default function CheckoutComingSoonModal({
   onClose,
 }: CheckoutComingSoonModalProps) {
   const modalRef = useRef<HTMLDivElement>(null)
-  const { t, language } = useLanguage()
 
   useEffect(() => {
     if (isOpen) {
@@ -36,19 +34,10 @@ export default function CheckoutComingSoonModal({
 
   if (!isOpen) return null
 
-  const title = language === 'tr' 
-    ? 'Ödeme Yakında Açılıyor' 
-    : 'Checkout Coming Soon'
-  
-  const message1 = language === 'tr'
-    ? 'Ödemeler resmi lansman sonrası açılacaktır.'
-    : 'Payments will open after official launch.'
-  
-  const message2 = language === 'tr'
-    ? 'Şu anda sadece Türkiye\'de mevcut.'
-    : 'Currently available in Turkey only.'
-  
-  const closeButton = language === 'tr' ? 'Kapat' : 'Close'
+  const title = 'Ödeme Yakında Açılıyor'
+  const message1 = 'Ödemeler resmi lansman sonrası açılacaktır.'
+  const message2 = "Şu anda sadece Türkiye'de mevcut."
+  const closeButton = 'Kapat'
 
   return createPortal(
     <div

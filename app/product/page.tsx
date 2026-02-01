@@ -18,17 +18,17 @@ export default function Product() {
       <Navbar />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 pb-16 sm:pb-20 md:pb-24">
         {/* Breadcrumb */}
-        <nav className="text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
+        <nav className="text-sm text-gray-500 mb-8" aria-label="Gezinti yolu">
           <div className="flex items-center gap-2 flex-wrap">
             <Link href="/" className="rc-underline">
               Ana Sayfa
             </Link>
             <span className="text-gray-400">/</span>
             <Link href="/shop" className="rc-underline">
-              Shop
+              Mağaza
             </Link>
             <span className="text-gray-400">/</span>
-            <span className="text-dark font-medium">Ready Cube Bag</span>
+            <span className="text-dark font-medium">Ready Cube Çanta</span>
           </div>
         </nav>
 
@@ -69,10 +69,10 @@ export default function Product() {
               {SALES_ENABLED && PRODUCT_PRICE_TRY > 0 ? 'Satışta' : 'Yakında'}
             </div>
             <h1 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-semibold text-dark tracking-tight leading-tight">
-              Ready Cube Bag
+              Ready Cube Çanta
             </h1>
             <p className="mt-4 text-base sm:text-lg text-gray-600 leading-relaxed">
-              Speedcubing ekipmanları için premium taşıma çantası.
+              Hızlı küp ekipmanları için üst seviye taşıma çantası.
             </p>
 
             <div className="mt-6">

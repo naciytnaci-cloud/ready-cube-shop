@@ -2,10 +2,10 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Hakkımızda',
-  description: 'Ready Cube hakkında bilgi edinin. Speedcubing topluluğu için özenle tasarlanmış ekipmanlar. Türkiye odaklı, topluluk merkezli bir marka.',
+  description: 'Ready Cube hakkında bilgi edinin. Hızlı küpçü topluluğu için özenle tasarlanmış ekipmanlar. Türkiye odaklı, topluluk merkezli bir marka.',
   openGraph: {
     title: 'Hakkımızda | Ready Cube',
-    description: 'Ready Cube hakkında bilgi edinin. Speedcubing topluluğu için özenle tasarlanmış ekipmanlar.',
+    description: 'Ready Cube hakkında bilgi edinin. Hızlı küpçü topluluğu için özenle tasarlanmış ekipmanlar.',
     type: 'website',
   },
 }
@@ -20,7 +20,7 @@ export default function About() {
             Ready Cube
           </h1>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-normal">
-            Speedcubing topluluğu için
+            Hızlı küpçü topluluğu için
             <br />
             özenle tasarlanmış ekipmanlar.
           </p>
@@ -33,13 +33,13 @@ export default function About() {
           </h2>
           <div className="max-w-3xl space-y-4 sm:space-y-6 text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed font-normal">
             <p>
-              Ready Cube, bir speedcuber'ın gerçek ihtiyacından doğdu. Türkiye'de speedcubing topluluğu için özel olarak tasarlanmış, kaliteli ve düzenli bir taşıma çantası bulmak zordu. Piyasada yeterli seçenek yoktu ve mevcut ürünler gerçek kullanım senaryolarını karşılamıyordu.
+              Ready Cube, bir hızlı küpçünün gerçek ihtiyacından doğdu. Türkiye'de hızlı küpçü topluluğu için özel olarak tasarlanmış, kaliteli ve düzenli bir taşıma çantası bulmak zordu. Piyasada yeterli seçenek yoktu ve mevcut ürünler gerçek kullanım senaryolarını karşılamıyordu.
             </p>
             <p>
-              Bu eksikliği fark eden bir speedcuber olarak, topluluğun gerçekten ihtiyaç duyduğu bir ürün geliştirme fikri ortaya çıktı. Ready Cube, sadece bir ürün değil, speedcubing topluluğuna adanmış bir marka olarak doğdu.
+              Bu eksikliği fark eden bir hızlı küpçü olarak, topluluğun gerçekten ihtiyaç duyduğu bir ürün geliştirme fikri ortaya çıktı. Ready Cube, sadece bir ürün değil, hızlı küpçü topluluğuna adanmış bir marka olarak doğdu.
             </p>
             <p>
-              Topluluk odaklı bir yaklaşımla, gerçek kullanıcı geri bildirimlerini dinleyerek ve turnuva ortamlarında gözlemleyerek, speedcubers'ın gerçekten ihtiyaç duyduğu özellikleri anlamaya çalışıyoruz.
+              Topluluk odaklı bir yaklaşımla, gerçek kullanıcı geri bildirimlerini dinleyerek ve turnuva ortamlarında gözlemleyerek, hızlı küpçülerin gerçekten ihtiyaç duyduğu özellikleri anlamaya çalışıyoruz.
             </p>
           </div>
         </section>
@@ -68,7 +68,7 @@ export default function About() {
                 />
               </svg>
               <span className="text-sm sm:text-base md:text-lg text-gray-600 font-normal leading-relaxed">
-                <strong className="font-semibold text-gray-900">Speedcuberlara özel tasarım:</strong> Ürünlerimiz, gerçek speedcubers'ın geri bildirimleri ve ihtiyaçları doğrultusunda geliştiriliyor.
+                <strong className="font-semibold text-gray-900">Hızlı küpçülere özel tasarım:</strong> Ürünlerimiz, gerçek hızlı küpçülerin geri bildirimleri ve ihtiyaçları doğrultusunda geliştiriliyor.
               </span>
             </li>
             <li className="flex items-start">
@@ -122,7 +122,7 @@ export default function About() {
                 />
               </svg>
               <span className="text-base sm:text-lg text-gray-600 font-normal leading-relaxed">
-                <strong className="font-semibold text-gray-900">Uzun vadeli marka vizyonu:</strong> Ready Cube bir hobi projesi değil, speedcubing topluluğu için sürdürülebilir bir marka olmayı hedefliyor.
+                <strong className="font-semibold text-gray-900">Uzun vadeli marka vizyonu:</strong> Ready Cube bir hobi projesi değil, hızlı küpçü topluluğu için sürdürülebilir bir marka olmayı hedefliyor.
               </span>
             </li>
             <li className="flex items-start">
@@ -140,7 +140,7 @@ export default function About() {
                 />
               </svg>
               <span className="text-base sm:text-lg text-gray-600 font-normal leading-relaxed">
-                <strong className="font-semibold text-gray-900">Türkiye odaklı başlangıç:</strong> Türkiye'deki speedcubing topluluğunun ihtiyaçlarını önceliklendirerek başlıyoruz.
+                <strong className="font-semibold text-gray-900">Türkiye odaklı başlangıç:</strong> Türkiye'deki hızlı küpçü topluluğunun ihtiyaçlarını önceliklendirerek başlıyoruz.
               </span>
             </li>
           </ul>
@@ -162,7 +162,7 @@ export default function About() {
               Gizli maliyet veya sürpriz yok. Ürün hazır olduğunda, fiyatlandırma ve özellikler sitede açıkça paylaşılacak. Şu anda ürün geliştirme sürecindeyiz ve topluluk geri bildirimlerini topluyoruz.
             </p>
             <p>
-              Her adımı açıkça paylaşıyoruz çünkü Ready Cube'u birlikte inşa ettiğimizi düşünüyoruz. Speedcubing topluluğu bizim için sadece müşteri değil, aynı zamanda bu yolculuğun bir parçası.
+              Her adımı açıkça paylaşıyoruz çünkü Ready Cube'u birlikte inşa ettiğimizi düşünüyoruz. Hızlı küpçü topluluğu bizim için sadece müşteri değil, aynı zamanda bu yolculuğun bir parçası.
             </p>
           </div>
         </section>
@@ -179,13 +179,13 @@ export default function About() {
             <li className="flex items-start">
               <span className="text-gray-900 mr-4 font-bold text-lg">•</span>
               <span className="text-base sm:text-lg text-gray-600 font-normal leading-relaxed">
-                <strong className="font-semibold text-gray-900">İlk ürün:</strong> Ready Cube Bag. Türkiye'deki speedcubing topluluğunun geri bildirimleri doğrultusunda geliştiriliyor.
+                <strong className="font-semibold text-gray-900">İlk ürün:</strong> Ready Cube Çanta. Türkiye'deki hızlı küpçü topluluğunun geri bildirimleri doğrultusunda geliştiriliyor.
               </span>
             </li>
             <li className="flex items-start">
               <span className="text-gray-900 mr-4 font-bold text-lg">•</span>
               <span className="text-base sm:text-lg text-gray-600 font-normal leading-relaxed">
-                <strong className="font-semibold text-gray-900">Sonraki adımlar:</strong> WCA uyumlu speedcube'ler. İlk ürün başarılı olduktan sonra, kaliteli ve uygun fiyatlı speedcube'ler üretmeyi planlıyoruz.
+                <strong className="font-semibold text-gray-900">Sonraki adımlar:</strong> WCA uyumlu küpler. İlk ürün başarılı olduktan sonra, kaliteli ve uygun fiyatlı küpler üretmeyi planlıyoruz.
               </span>
             </li>
             <li className="flex items-start">
@@ -197,7 +197,7 @@ export default function About() {
             <li className="flex items-start">
               <span className="text-gray-900 mr-4 font-bold text-lg">•</span>
               <span className="text-base sm:text-lg text-gray-600 font-normal leading-relaxed">
-                <strong className="font-semibold text-gray-900">Toplulukla birlikte büyüme:</strong> Ready Cube, speedcubing topluluğunun geri bildirimleri ve ihtiyaçları doğrultusunda şekilleniyor. Bu yolculukta birlikte ilerliyoruz.
+                <strong className="font-semibold text-gray-900">Toplulukla birlikte büyüme:</strong> Ready Cube, hızlı küpçü topluluğunun geri bildirimleri ve ihtiyaçları doğrultusunda şekilleniyor. Bu yolculukta birlikte ilerliyoruz.
               </span>
             </li>
           </ul>

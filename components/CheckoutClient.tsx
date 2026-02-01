@@ -55,7 +55,7 @@ export default function CheckoutClient() {
             <div className="bg-neutralSurface border border-[#111111]/10 rounded-xl p-6 sm:p-8">
               <p className="text-base text-gray-600">Sepet boş.</p>
               <Link href="/shop" className="mt-4 inline-flex text-dark rc-underline rc-underline-brand">
-                Shop’a dön →
+                Mağazaya dön →
               </Link>
             </div>
           </div>

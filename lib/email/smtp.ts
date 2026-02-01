@@ -19,18 +19,37 @@ function readEnv(name: string) {
 }
 
 function getSmtpConfig(): SMTPConfig | null {
+  // Primary: generic SMTP_* variables
   const host = readEnv('SMTP_HOST')
   const port = Number(readEnv('SMTP_PORT') || '0')
   const from = readEnv('SMTP_FROM')
+  const user = readEnv('SMTP_USER')
+  const pass = readEnv('SMTP_PASS')
 
-  if (!host || !port || !from) return null
+  if (host && port && from) {
+    return {
+      host,
+      port,
+      secure: String(readEnv('SMTP_SECURE') || '').toLowerCase() === 'true' || port === 465,
+      user,
+      pass,
+      from,
+    }
+  }
+
+  // Fallback: Gmail SMTP via GMAIL_* variables (App Password)
+  const gmailUser = readEnv('GMAIL_USER')
+  const gmailAppPassword = readEnv('GMAIL_APP_PASSWORD')
+  if (!gmailUser || !gmailAppPassword) return null
+
+  const gmailFrom = readEnv('GMAIL_FROM') || gmailUser
   return {
-    host,
-    port,
-    secure: String(readEnv('SMTP_SECURE') || '').toLowerCase() === 'true' || port === 465,
-    user: readEnv('SMTP_USER'),
-    pass: readEnv('SMTP_PASS'),
-    from,
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
+    user: gmailUser,
+    pass: gmailAppPassword,
+    from: gmailFrom,
   }
 }
 

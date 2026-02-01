@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'WCA Cubes | Shop',
-  description: 'WCA cubes will be available after our first product launch. Coming soon.',
+  title: 'WCA Küpleri | Mağaza',
+  description: 'WCA küpleri ilk ürün lansmanımızdan sonra satışa sunulacak. Yakında.',
   openGraph: {
-    title: 'WCA Cubes | Ready Cube Shop',
-    description: 'WCA cubes will be available after our first product launch. Coming soon.',
+    title: 'WCA Küpleri | Ready Cube Mağaza',
+    description: 'WCA küpleri ilk ürün lansmanımızdan sonra satışa sunulacak. Yakında.',
     type: 'website',
   },
 }

@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Ready Cube Bag',
-  description: 'Speedcubing ekipmanları için premium taşıma çantası. Yakında satışta.',
+  title: 'Ready Cube Çanta',
+  description: 'Hızlı küp ekipmanları için üst seviye taşıma çantası. Yakında satışta.',
   openGraph: {
-    title: 'Ready Cube Bag | Ready Cube',
-    description: 'Speedcubing ekipmanları için premium taşıma çantası.',
+    title: 'Ready Cube Çanta | Ready Cube',
+    description: 'Hızlı küp ekipmanları için üst seviye taşıma çantası.',
     type: 'website',
   },
 }

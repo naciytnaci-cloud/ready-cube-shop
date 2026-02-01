@@ -2,10 +2,10 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Çantalar',
-  description: 'Speedcubing için tasarlanmış premium taşıma çözümleri. Ready Cube çantaları ile tüm WCA küplerinizi güvenle taşıyın.',
+  description: 'Hızlı küp için tasarlanmış üst seviye taşıma çözümleri. Ready Cube çantaları ile tüm WCA küplerinizi güvenle taşıyın.',
   openGraph: {
     title: 'Çantalar | Ready Cube',
-    description: 'Speedcubing için tasarlanmış premium taşıma çözümleri.',
+    description: 'Hızlı küp için tasarlanmış üst seviye taşıma çözümleri.',
     type: 'website',
   },
 }

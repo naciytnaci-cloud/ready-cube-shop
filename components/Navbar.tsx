@@ -9,6 +9,7 @@ import { SALES_ENABLED } from '@/lib/publicConfig'
 const navItems = [
   { name: 'Ana Sayfa', href: '/' },
   { name: 'Çanta', href: '/shop' },
+  { name: 'PDF', href: '/pdf' },
   { name: 'WCA Küpleri', href: '#', comingSoon: true },
   { name: 'Hakkımızda', href: '/about', comingSoon: false },
 ]
@@ -145,7 +146,7 @@ export default function Navbar() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-dark p-2 min-h-[44px] min-w-[44px] flex items-center justify-center transition-opacity duration-200 hover:opacity-70 active:opacity-50 touch-manipulation"
-              aria-label="Toggle menu"
+              aria-label="Menüyü aç/kapat"
               aria-expanded={isOpen}
             >
               {isOpen ? (

@@ -14,16 +14,16 @@ interface CartProps {
 const mockCartItems = [
   {
     id: 'ready-cube-bag',
-    name: 'Ready Cube Bag',
-    variant: 'Black',
+    name: 'Ready Cube Çanta',
+    variant: 'Siyah',
     price: 199.99,
     quantity: 1,
     image: '/products/ready-cube-bag.jpg',
   },
   {
     id: 'speedcube-3x3',
-    name: 'Speedcube 3x3',
-    variant: 'Stickerless',
+    name: 'Hızlı Küp 3x3',
+    variant: 'Etiketsiz',
     price: 89.99,
     quantity: 2,
     image: '/products/speedcube-3x3.jpg',
@@ -129,16 +129,16 @@ export default function Cart({ isOpen, onClose }: CartProps) {
         }`}
         role="dialog"
         aria-modal="true"
-        aria-label="Shopping cart"
+        aria-label="Alışveriş sepeti"
       >
         <div className="flex flex-col h-full">
           {/* Header */}
           <div className="flex items-center justify-between p-6 border-b border-gray-200">
-            <h2 className="text-xl font-semibold text-gray-900">Your Cart</h2>
+            <h2 className="text-xl font-semibold text-gray-900">Sepetiniz</h2>
             <button
               onClick={onClose}
               className="text-gray-400 hover:text-gray-600 transition-colors duration-200 p-1 hover:scale-110"
-              aria-label="Close cart"
+              aria-label="Sepeti kapat"
             >
               <svg
                 className="w-6 h-6"
@@ -173,10 +173,8 @@ export default function Cart({ isOpen, onClose }: CartProps) {
                     d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                   />
                 </svg>
-                <p className="text-gray-900 text-lg font-medium mb-2">Your cart is empty</p>
-                <p className="text-gray-600 text-sm">
-                  Start shopping to add items to your cart
-                </p>
+                <p className="text-gray-900 text-lg font-medium mb-2">Sepetiniz boş</p>
+                <p className="text-gray-600 text-sm">Sepetinize ürün eklemek için alışverişe başlayın</p>
               </div>
             ) : (
               <div className="space-y-4">
@@ -222,7 +220,7 @@ export default function Cart({ isOpen, onClose }: CartProps) {
                             <button
                               onClick={() => handleMockRemove(item.id)}
                               className="text-gray-400 hover:text-gray-600 transition-colors duration-200 flex-shrink-0 p-1 hover:scale-110"
-                              aria-label={`Remove ${item.name}`}
+                              aria-label={`Kaldır: ${item.name}`}
                             >
                               <svg
                                 className="w-4 h-4"
@@ -251,7 +249,7 @@ export default function Cart({ isOpen, onClose }: CartProps) {
                               <button
                                 onClick={() => handleMockQuantityChange(item.id, -1)}
                                 className="px-2.5 py-1.5 text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-all duration-200"
-                                aria-label="Decrease quantity"
+                                aria-label="Adedi azalt"
                               >
                                 <svg
                                   className="w-3.5 h-3.5"
@@ -273,7 +271,7 @@ export default function Cart({ isOpen, onClose }: CartProps) {
                               <button
                                 onClick={() => handleMockQuantityChange(item.id, 1)}
                                 className="px-2.5 py-1.5 text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-all duration-200"
-                                aria-label="Increase quantity"
+                                aria-label="Adedi artır"
                               >
                                 <svg
                                   className="w-3.5 h-3.5"
@@ -309,34 +307,34 @@ export default function Cart({ isOpen, onClose }: CartProps) {
               <div className="space-y-3">
                 {/* Subtotal */}
                 <div className="flex justify-between text-sm text-gray-700">
-                  <span>Subtotal</span>
+                  <span>Ara toplam</span>
                   <span className="font-medium">₺{subtotal.toFixed(2)}</span>
                 </div>
 
                 {/* Shipping */}
                 <div className="flex justify-between text-sm text-gray-700">
-                  <span>Shipping</span>
+                  <span>Kargo</span>
                   <span className="font-medium text-gray-500">
-                    Calculated at checkout
+                    Ödeme adımında hesaplanır
                   </span>
                 </div>
 
                 {/* Divider */}
                 <div className="border-t border-gray-200 pt-3">
                   <div className="flex justify-between text-base font-semibold text-gray-900">
-                    <span>Total</span>
+                    <span>Toplam</span>
                     <span>₺{total.toFixed(2)}</span>
                   </div>
                 </div>
               </div>
 
-              {/* Checkout Button */}
+              {/* Ödeme butonu */}
               <Link
                 href="/cart"
                 onClick={onClose}
                 className="block w-full bg-[#E10600] text-white py-3.5 px-6 rounded-md font-semibold text-sm text-center hover:bg-[#b90000] hover:scale-105 active:scale-[0.98] transition-all duration-200 ease-out transform"
               >
-                Checkout
+                Sepete Git
               </Link>
             </div>
           )}

@@ -27,7 +27,7 @@ export default function ProductDetailsSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 sm:mb-16 md:mb-20">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-dark tracking-tight leading-tight">
-            Designed in Every Detail
+            Her Detayında Tasarım
           </h2>
         </div>
 

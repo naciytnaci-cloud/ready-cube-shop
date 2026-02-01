@@ -1,5 +1,5 @@
 /**
- * Shop Products
+ * Mağaza Ürünleri
  * 
  * This file contains product data and types for the Ready Cube shop.
  * Products are currently mock data for UI purposes.
@@ -33,24 +33,25 @@ export interface Product {
  */
 export const readyCubeProBag: Product = {
   id: 'ready-cube-pro-bag-v2',
-  name: 'Ready Cube Pro Carry Bag (V2)',
+  name: 'Ready Cube Pro Taşıma Çantası (V2)',
   slug: 'ready-cube-pro-bag',
-  description: 'Built for speedcubers. Designed for competition. A premium carry bag designed to fit all WCA puzzles and accessories.',
+  description:
+    'Hızlı küpçüler için üretildi. Yarışma için tasarlandı. Tüm WCA küpleri ve aksesuarlarına uyacak şekilde tasarlanmış üst seviye taşıma çantası.',
   price: null,
   status: 'coming_soon',
   category: 'bags',
   image: '/products/ready-cube-pro-bag.jpg',
   features: [
-    'Fits all WCA puzzles',
-    'Protective foam interior',
-    'Modular compartments',
-    'Competition-ready design',
+    'Tüm WCA küplerine uyumlu',
+    'Korumalı köpük iç yapı',
+    'Modüler bölmeler',
+    'Yarışmaya uygun tasarım',
   ],
   specifications: {
-    capacity: 'All WCA puzzles + accessories',
-    material: 'Premium materials',
-    dimensions: 'TBD',
-    weight: 'TBD',
+    capacity: 'Tüm WCA küpleri + aksesuarlar',
+    material: 'Üst seviye malzemeler',
+    dimensions: 'Yakında',
+    weight: 'Yakında',
   },
 }
 

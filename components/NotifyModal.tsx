@@ -72,7 +72,7 @@ export default function NotifyModal({ isOpen, onClose, productName }: NotifyModa
         className="fixed inset-0 z-50 flex items-center justify-center p-4"
         role="dialog"
         aria-modal="true"
-        aria-label="Notify me when available"
+        aria-label="Stokta olunca haber ver"
       >
         <div
           className="bg-white rounded-xl shadow-2xl w-full max-w-md transform transition-all duration-300"
@@ -80,11 +80,11 @@ export default function NotifyModal({ isOpen, onClose, productName }: NotifyModa
         >
           {/* Header */}
           <div className="flex items-center justify-between p-6 border-b border-gray-200">
-            <h2 className="text-xl font-bold text-gray-900">Notify me when available</h2>
+            <h2 className="text-xl font-bold text-gray-900">Stokta olunca haber ver</h2>
             <button
               onClick={onClose}
               className="text-gray-400 hover:text-gray-600 transition-colors duration-200 p-1 hover:scale-110"
-              aria-label="Close"
+              aria-label="Kapat"
             >
               <svg
                 className="w-6 h-6"
@@ -105,13 +105,13 @@ export default function NotifyModal({ isOpen, onClose, productName }: NotifyModa
           {/* Content */}
           <div className="p-6">
             <p className="text-gray-600 mb-6 font-normal leading-relaxed">
-              We'll notify you when this product launches.
+              Bu ürün satışa çıktığında size haber vereceğiz.
             </p>
 
             <form onSubmit={handleSubmit}>
               <div className="mb-6">
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  Email address
+                  E‑posta adresi
                 </label>
                 <input
                   type="email"
@@ -120,7 +120,7 @@ export default function NotifyModal({ isOpen, onClose, productName }: NotifyModa
                   onChange={(e) => setEmail(e.target.value)}
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#E10600] focus:border-[#E10600] outline-none transition-all duration-200"
-                  placeholder="your@email.com"
+                  placeholder="ornek@eposta.com"
                   disabled={isSubmitting}
                 />
               </div>
@@ -133,14 +133,14 @@ export default function NotifyModal({ isOpen, onClose, productName }: NotifyModa
                   className="flex-1 px-4 py-3 border border-gray-300 rounded-lg font-semibold text-gray-700 hover:bg-gray-50 transition-colors duration-200"
                   disabled={isSubmitting}
                 >
-                  Cancel
+                  İptal
                 </button>
                 <button
                   type="submit"
                   className="flex-1 px-4 py-3 bg-[#E10600] text-white rounded-lg font-semibold hover:bg-[#b90000] active:scale-[0.98] transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? 'Submitting...' : 'Notify me'}
+                  {isSubmitting ? 'Gönderiliyor...' : 'Haber ver'}
                 </button>
               </div>
             </form>

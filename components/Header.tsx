@@ -35,10 +35,10 @@ export default function Header() {
   }, [mobileMenuOpen])
 
   const navItems = [
-    { href: '/', label: language === 'tr' ? 'Ana Sayfa' : 'Home' },
-    { href: '/cantalar', label: language === 'tr' ? 'Çantalar' : 'Bags' },
-    { href: '/shop', label: language === 'tr' ? 'Shop' : 'Shop', comingSoon: false },
-    { href: '/about', label: language === 'tr' ? 'Hakkımızda' : 'About' },
+    { href: '/', label: 'Ana Sayfa' },
+    { href: '/cantalar', label: 'Çantalar' },
+    { href: '/shop', label: 'Mağaza', comingSoon: false },
+    { href: '/about', label: 'Hakkımızda' },
   ]
 
   return (
@@ -73,7 +73,7 @@ export default function Header() {
                   {item.label}
                   {item.comingSoon && (
                     <span className="ml-1.5 text-xs text-gray-400 font-normal">
-                      ({language === 'tr' ? 'Yakında' : 'Soon'})
+                      (Yakında)
                     </span>
                   )}
                 </Link>
@@ -104,9 +104,9 @@ export default function Header() {
                     ? 'bg-gray-900 text-white'
                     : 'bg-white text-gray-600 hover:bg-gray-50'
                 }`}
-                aria-label="English"
+                aria-label="İngilizce"
               >
-                EN
+                İNG
               </button>
             </div>
 
@@ -114,16 +114,16 @@ export default function Header() {
             <button
               disabled
               className="hidden md:block text-sm font-medium text-gray-400 cursor-not-allowed px-4 py-2"
-              aria-label={language === 'tr' ? 'Mağaza Yakında' : 'Store Coming Soon'}
+              aria-label="Mağaza yakında"
             >
-              {language === 'tr' ? 'Mağaza Yakında' : 'Store Soon'}
+              Mağaza Yakında
             </button>
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="md:hidden text-gray-600 hover:text-gray-900 active:scale-95 transition-all duration-200 touch-manipulation min-w-[44px] min-h-[44px] flex items-center justify-center"
-              aria-label="Menu"
+              aria-label="Menü"
             >
               {mobileMenuOpen ? (
                 <svg
@@ -177,7 +177,7 @@ export default function Header() {
             }`}
             role="dialog"
             aria-modal="true"
-            aria-label="Navigation menu"
+            aria-label="Gezinme menüsü"
           >
             <div className="flex flex-col h-full">
               {/* Header with Close Button */}
@@ -203,15 +203,15 @@ export default function Header() {
                         ? 'bg-gray-900 text-white'
                         : 'bg-white text-gray-600'
                     }`}
-                    aria-label="English"
+                    aria-label="İngilizce"
                   >
-                    EN
+                    İNG
                   </button>
                 </div>
                 <button
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-gray-400 hover:text-gray-600 transition-colors duration-200 p-2 hover:scale-110"
-                  aria-label="Close menu"
+                  aria-label="Menüyü kapat"
                 >
                   <svg
                     className="w-6 h-6"
@@ -259,7 +259,7 @@ export default function Header() {
                           <span>{item.label}</span>
                           {item.comingSoon && (
                             <span className="text-xs text-gray-400 font-normal">
-                              ({language === 'tr' ? 'Yakında' : 'Soon'})
+                              (Yakında)
                             </span>
                           )}
                         </div>
@@ -273,9 +273,9 @@ export default function Header() {
                   <button
                     disabled
                     className="w-full text-sm font-medium text-gray-400 cursor-not-allowed text-center py-3"
-                    aria-label={language === 'tr' ? 'Mağaza Yakında' : 'Store Coming Soon'}
+                    aria-label="Mağaza yakında"
                   >
-                    {language === 'tr' ? 'Mağaza Yakında' : 'Store Soon'}
+                    Mağaza Yakında
                   </button>
                 </div>
               </nav>

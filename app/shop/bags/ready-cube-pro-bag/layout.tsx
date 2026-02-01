@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Ready Cube Pro Carry Bag (V2) | Bags',
-  description: 'Built for speedcubers. Designed for competition. Premium carry bag that fits all WCA puzzles and accessories.',
+  title: 'Ready Cube Pro Taşıma Çantası (V2) | Çantalar',
+  description: 'Hızlı küpçüler için üretildi. Yarışma için tasarlandı. Tüm WCA küpleri ve aksesuarlarına uyumlu üst seviye taşıma çantası.',
   openGraph: {
-    title: 'Ready Cube Pro Carry Bag (V2) | Ready Cube',
-    description: 'Built for speedcubers. Designed for competition. Premium carry bag that fits all WCA puzzles and accessories.',
+    title: 'Ready Cube Pro Taşıma Çantası (V2) | Ready Cube',
+    description: 'Hızlı küpçüler için üretildi. Yarışma için tasarlandı. Tüm WCA küpleri ve aksesuarlarına uyumlu üst seviye taşıma çantası.',
     type: 'website',
   },
 }

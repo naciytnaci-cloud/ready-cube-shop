@@ -7,10 +7,10 @@ export default function BrandStorySection() {
         </h2>
         <div className="space-y-4 text-center">
           <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed font-normal">
-            Speedcubing topluluğundan doğan bir proje.
+            Hızlı küpçü topluluğundan doğan bir proje.
           </p>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed font-normal">
-            Yarışmalar ve günlük kullanım için premium ekipmanlar üretiyoruz.
+            Yarışmalar ve günlük kullanım için üst seviye ekipmanlar üretiyoruz.
           </p>
         </div>
       </div>

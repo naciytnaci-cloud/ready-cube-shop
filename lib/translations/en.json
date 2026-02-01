@@ -1,56 +1,56 @@
 {
   "common": {
-    "home": "Home",
-    "shop": "Shop",
-    "bags": "Bags",
-    "cubes": "Cubes",
-    "about": "About",
-    "contact": "Contact",
-    "comingSoon": "Coming Soon"
+    "home": "Ana Sayfa",
+    "shop": "Mağaza",
+    "bags": "Çantalar",
+    "cubes": "Küpler",
+    "about": "Hakkımızda",
+    "contact": "İletişim",
+    "comingSoon": "Yakında"
   },
   "home": {
-    "title": "Professional Speedcubing Equipment",
-    "titleHighlight": "Speedcubing",
-    "subtitle": "WCA-compliant, competition-level speedcubes. Designed for professional speedcubing in Turkey.",
-    "aboutButton": "About Us",
-    "whyTitle": "Why Ready Cube?",
-    "whyText1": "Ready Cube offers professional equipment specially designed for the speedcubing community in Turkey.",
-    "whyText2": "All our products comply with WCA standards and are optimized for competition-level performance."
+    "title": "Profesyonel Hızlı Küp Ekipmanları",
+    "titleHighlight": "Hızlı Küp",
+    "subtitle": "WCA uyumlu, yarışma seviyesinde küpler. Türkiye'de hızlı küpçüler için tasarlandı.",
+    "aboutButton": "Hakkımızda",
+    "whyTitle": "Neden Ready Cube?",
+    "whyText1": "Ready Cube, Türkiye'de hızlı küpçü topluluğu için özel olarak tasarlanmış profesyonel ekipmanlar sunar.",
+    "whyText2": "Tüm ürünlerimiz WCA standartlarına uygundur ve yarışma seviyesinde performans için optimize edilmiştir."
   },
   "shop": {
-    "title": "Shop",
-    "subtitle": "Premium speedcubing gear by Ready Cube",
-    "bagsTitle": "Bags",
-    "bagsSubtitle": "Designed for competitive speedcubers",
-    "cubesTitle": "COMING SOON",
-    "cubesSubtitle": "WCA cubes will be available after our first product launch.",
-    "viewBags": "View Bags",
-    "viewProduct": "View product",
-    "comingSoon": "Coming Soon"
+    "title": "Mağaza",
+    "subtitle": "Ready Cube tarafından tasarlanan üst seviye hızlı küp ekipmanları",
+    "bagsTitle": "Çantalar",
+    "bagsSubtitle": "Yarışmacı hızlı küpçüler için tasarlandı",
+    "cubesTitle": "YAKINDA",
+    "cubesSubtitle": "WCA küpleri ilk ürün lansmanımızdan sonra satışa sunulacak.",
+    "viewBags": "Çantaları Gör",
+    "viewProduct": "Ürünü Gör",
+    "comingSoon": "Yakında"
   },
   "product": {
-    "breadcrumbShop": "Shop",
-    "breadcrumbBags": "Bags",
-    "designedForSpeedcubers": "Designed for Speedcubers",
-    "designedText1": "Built from real competition needs, this bag addresses the challenges speedcubers face at tournaments. Every detail is designed with protection, organization, and speed in mind.",
-    "designedText2": "As the first Ready Cube product, it represents our commitment to creating gear that truly serves the speedcubing community.",
-    "features": "Features",
-    "whatFitsInside": "What fits inside",
-    "designedToFit": "Designed to fit competition setups.",
-    "interiorCapacity": "Interior Capacity",
-    "interiorCapacityText": "This bag is designed to accommodate all WCA puzzles and essential competition gear:",
-    "joinLaunchList": "Join the launch list",
-    "limitedBatch": "Limited first batch. Early access.",
-    "firstProduct": "First Ready Cube product. Launching soon."
+    "breadcrumbShop": "Mağaza",
+    "breadcrumbBags": "Çantalar",
+    "designedForSpeedcubers": "Hızlı küpçüler için tasarlandı",
+    "designedText1": "Gerçek yarış ihtiyaçlarından yola çıkarak geliştirilen bu çanta, turnuvalarda hızlı küpçülerin karşılaştığı zorluklara çözüm üretir. Her detay; koruma, düzen ve hız odağıyla tasarlandı.",
+    "designedText2": "Ready Cube’un ilk ürünü olarak, hızlı küpçü topluluğuna gerçekten hizmet eden ekipmanlar üretme kararlılığımızı yansıtır.",
+    "features": "Özellikler",
+    "whatFitsInside": "İçine neler sığar?",
+    "designedToFit": "Yarışma kurulumlarına uygun ölçülerde tasarlandı.",
+    "interiorCapacity": "İç Hacim",
+    "interiorCapacityText": "Bu çanta; tüm WCA küpleri ve temel yarış ekipmanlarını taşımak için tasarlandı:",
+    "joinLaunchList": "Lansman listesine katıl",
+    "limitedBatch": "Sınırlı ilk parti. Erken erişim.",
+    "firstProduct": "İlk Ready Cube ürünü. Yakında satışta."
   },
   "header": {
-    "cartTooltip": "Shop opens soon"
+    "cartTooltip": "Mağaza yakında açılıyor"
   },
   "footer": {
-    "description": "Premium speedcubing gear designed in Turkey.",
-    "shop": "Shop",
-    "info": "Info",
-    "copyright": "© {year} Ready Cube – All rights reserved"
+    "description": "Türkiye'de tasarlanan üst seviye hızlı küp ekipmanları.",
+    "shop": "Mağaza",
+    "info": "Bilgi",
+    "copyright": "© {year} Ready Cube – Tüm hakları saklıdır"
   }
 }
 

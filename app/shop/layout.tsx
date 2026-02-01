@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Shop',
-  description: 'Premium speedcubing gear by Ready Cube. Professional carry solutions and WCA puzzles.',
+  title: 'Mağaza',
+  description: 'Ready Cube ürünleri: üst seviye taşıma çözümleri ve WCA küpleri.',
   openGraph: {
-    title: 'Shop | Ready Cube',
-    description: 'Premium speedcubing gear by Ready Cube. Professional carry solutions and WCA puzzles.',
+    title: 'Mağaza | Ready Cube',
+    description: 'Ready Cube ürünleri: üst seviye taşıma çözümleri ve WCA küpleri.',
     type: 'website',
   },
 }

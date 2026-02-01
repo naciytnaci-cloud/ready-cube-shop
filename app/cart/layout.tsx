@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Shopping Cart',
-  description: 'Review your items and proceed to checkout. Premium speedcubing products at Ready Cube.',
+  title: 'Sepet',
+  description: 'Ürünlerinizi gözden geçirin ve ödemeye devam edin.',
   openGraph: {
-    title: 'Shopping Cart | Ready Cube',
-    description: 'Review your items and proceed to checkout.',
+    title: 'Sepet | Ready Cube',
+    description: 'Ürünlerinizi gözden geçirin ve ödemeye devam edin.',
     type: 'website',
   },
 }

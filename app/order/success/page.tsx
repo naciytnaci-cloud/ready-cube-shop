@@ -48,7 +48,7 @@ export default function OrderSuccessPage() {
             href="/shop"
             className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-dark text-white font-semibold rounded-md hover:opacity-90 transition-opacity duration-200 ease-out min-h-[48px]"
           >
-            Shop’a dön
+            Mağazaya dön
           </Link>
           <Link
             href="/contact"

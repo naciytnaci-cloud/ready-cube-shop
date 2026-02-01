@@ -20,7 +20,7 @@ export default function HeroSection() {
               Taşıma Çantası
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-300 font-normal leading-relaxed mb-8 sm:mb-10 max-w-xl mx-auto lg:mx-0">
-              Ready Cube Bag. Düzenli, güvenli, sade.
+              Ready Cube Çanta. Düzenli, güvenli, sade.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
@@ -34,7 +34,7 @@ export default function HeroSection() {
                 href="/shop"
                 className="inline-flex items-center justify-center w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-transparent border border-white/20 hover:border-white/30 text-white font-semibold rounded-md transition-colors duration-200 ease-out text-base sm:text-lg sm:min-w-[200px] min-h-[48px] sm:min-h-[56px] touch-manipulation"
               >
-                Shop
+                Mağaza
               </a>
             </div>
           </div>

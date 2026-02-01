@@ -9,15 +9,14 @@ import TrustShippingPaymentSection from '@/components/TrustShippingPaymentSectio
 import FeaturedProductSection from '@/components/FeaturedProductSection'
 import ComingSoonSection from '@/components/ComingSoonSection'
 import FinalCTASection from '@/components/FinalCTASection'
-import PreLaunchChecklistSection from '@/components/PreLaunchChecklistSection'
 import SimpleFooter from '@/components/SimpleFooter'
 
 export const metadata: Metadata = {
-  title: 'Ready Cube - Speedcubing Ekipmanları',
-  description: 'Yarışma ve günlük kullanım için premium ekipmanlar.',
+  title: 'Ready Cube - Hızlı Küp Ekipmanları',
+  description: 'Yarışma ve günlük kullanım için üst seviye ekipmanlar.',
   openGraph: {
     title: 'Ready Cube',
-    description: 'Yarışma ve günlük kullanım için premium ekipmanlar.',
+    description: 'Yarışma ve günlük kullanım için üst seviye ekipmanlar.',
     type: 'website',
   },
 }
@@ -35,7 +34,6 @@ export default function Home() {
       <FeaturedProductSection />
       <ComingSoonSection />
       <FinalCTASection />
-      {process.env.NODE_ENV === 'development' && <PreLaunchChecklistSection />}
       <SimpleFooter />
     </div>
   )

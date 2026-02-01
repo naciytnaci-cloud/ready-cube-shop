@@ -3,7 +3,7 @@ import Button from '@/components/Button'
 
 export const metadata: Metadata = {
   title: 'İletişim',
-  description: 'Ready Cube ile iletişime geçin. Sorularınız, önerileriniz veya destek talepleriniz için bizimle iletişime geçebilirsiniz. Türkiye merkezli profesyonel speedcubing ekipmanları.',
+  description: "Ready Cube ile iletişime geçin. Sorularınız, önerileriniz veya destek talepleriniz için bizimle iletişime geçebilirsiniz. Türkiye merkezli profesyonel hızlı küp ekipmanları.",
   openGraph: {
     title: 'İletişim | Ready Cube',
     description: 'Ready Cube ile iletişime geçin. Sorularınız ve destek talepleriniz için bizimle iletişime geçebilirsiniz.',
@@ -62,7 +62,7 @@ export default function Contact() {
                     Türkiye'de Tasarlandı
                   </h3>
                   <p className="mt-3 text-base text-white/80 leading-relaxed font-normal">
-                    Ready Cube ürünleri, Türkiye'de speedcubing topluluğunun
+                    Ready Cube ürünleri, Türkiye'de hızlı küpçü topluluğunun
                     ihtiyaçları göz önünde bulundurularak tasarlanmıştır.
                   </p>
                 </div>

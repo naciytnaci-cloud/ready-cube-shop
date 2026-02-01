@@ -11,20 +11,20 @@ interface Feature {
 
 const features: Feature[] = [
   {
-    title: 'Competition Ready',
-    description: 'Built for serious speedcubers who compete.',
+    title: 'Yarışmaya Hazır',
+    description: 'Yarışan ciddi hızlı küpçüler için üretildi.',
   },
   {
-    title: 'Clean Design',
-    description: 'Simple, focused, no distractions.',
+    title: 'Sade Tasarım',
+    description: 'Basit, odaklı, dikkat dağıtmaz.',
   },
   {
-    title: 'Cubers Focused',
-    description: 'Made by the community, for the community.',
+    title: 'Topluluk Odaklı',
+    description: 'Topluluk tarafından, topluluk için.',
   },
   {
-    title: 'Performance First',
-    description: 'Every detail optimized for speed.',
+    title: 'Performans Önceliği',
+    description: 'Her detay hız için optimize edildi.',
   },
 ]
 

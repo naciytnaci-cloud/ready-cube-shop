@@ -15,7 +15,7 @@ export default function SimpleFooter() {
               Ready Cube
             </div>
             <p className="text-sm text-gray-300 max-w-md">
-              Speedcubing için tasarlandı.
+              Hızlı küpçüler için tasarlandı.
             </p>
           </div>
 

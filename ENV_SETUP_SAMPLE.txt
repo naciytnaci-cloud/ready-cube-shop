@@ -1,0 +1,32 @@
+# Gmail SMTP (App Password ile)
+# Not: Gmail için normal şifre değil, Google hesabınızda oluşturduğunuz "App Password" kullanılmalıdır.
+GMAIL_USER=youraddress@gmail.com
+GMAIL_APP_PASSWORD=xxxx xxxx xxxx xxxx
+
+# Opsiyonel: From alanı farklı olacaksa (çoğu durumda aynı kalmalı)
+# GMAIL_FROM=youraddress@gmail.com
+
+# Opsiyonel: PDF bağlantısı (placeholder bırakılabilir)
+F2L_PDF_LINK=https://example.com/f2l.pdf
+
+# Stripe (PDF Payment Link) - test modunda oluşturulan link
+# Başarılı ödeme dönüşü için örnek: https://readycube.site/pdf/success
+NEXT_PUBLIC_STRIPE_PDF_PAYMENT_LINK=https://buy.stripe.com/test_XXXXXXXXXXXXXXXXXXXX
+
+# PDF görüntüleme token'ları için imza anahtarı (gizli olmalı)
+# Örnek üretim: `openssl rand -base64 32`
+PDF_TOKEN_SECRET=change-me-to-a-long-random-secret
+
+# PDF dosyası public klasörde OLMAMALI. Dosyayı sunucuda bir path'e koyup burada verin.
+# Varsayılan: <repo>/private/pdfs/f2l-baslangic-rehberi.pdf
+# F2L_PDF_FILE_PATH=/abs/path/to/f2l-baslangic-rehberi.pdf
+
+# Alternatif (generic) SMTP ayarları kullanmak isterseniz:
+# SMTP_HOST=smtp.gmail.com
+# SMTP_PORT=465
+# SMTP_SECURE=true
+# SMTP_USER=youraddress@gmail.com
+# SMTP_PASS=xxxx xxxx xxxx xxxx
+# SMTP_FROM=youraddress@gmail.com
+
+

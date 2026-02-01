@@ -6,43 +6,43 @@ const products: Record<string, {
 }> = {
   '2x2': {
     name: '2x2 Rubik Küp',
-    description: 'Professional 2x2 speedcube optimized for fast and smooth turning. Competition-level performance.',
+    description: 'Hızlı ve akıcı dönüş için optimize edilmiş profesyonel 2x2 küp. Yarışma seviyesinde performans.',
   },
   '3x3': {
     name: '3x3 Rubik Küp',
-    description: 'World record quality 3x3 speedcube. The preferred choice of top speedcubers worldwide.',
+    description: 'Dünya rekoru seviyesinde 3x3 küp kalitesi. Dünyadaki üst seviye hızlı küpçülerin tercih ettiği seçenek.',
   },
   '4x4': {
     name: '4x4 Rubik Küp',
-    description: 'Competition-grade 4x4 speedcube with excellent stability and speed.',
+    description: 'Mükemmel denge ve hız sunan yarışma seviyesinde 4x4 küp.',
   },
   '5x5': {
     name: '5x5 Rubik Küp',
-    description: 'Professional 5x5 speedcube with advanced internal mechanism.',
+    description: 'Gelişmiş iç mekanizmaya sahip profesyonel 5x5 küp.',
   },
   '6x6': {
     name: '6x6 Rubik Küp',
-    description: 'High-quality 6x6 speedcube for professional use.',
+    description: 'Profesyonel kullanım için yüksek kaliteli 6x6 küp.',
   },
   '7x7': {
     name: '7x7 Rubik Küp',
-    description: 'The largest standard speedcube with perfect engineering.',
+    description: 'Mükemmel mühendislik ile üretilmiş en büyük standart küp.',
   },
   'megaminx': {
     name: 'Megaminx',
-    description: '12-sided professional Megaminx speedcube. Smooth turning and excellent control.',
+    description: '12 yüzlü profesyonel Megaminx. Akıcı dönüş ve yüksek kontrol.',
   },
   'pyraminx': {
     name: 'Pyraminx',
-    description: 'Fast and precise Pyraminx speedcube. Easy turning and excellent control.',
+    description: 'Hızlı ve hassas Pyraminx. Kolay dönüş ve yüksek kontrol.',
   },
   'skewb': {
     name: 'Skewb',
-    description: 'Compact and fast Skewb speedcube. Smooth turning and professional quality.',
+    description: 'Kompakt ve hızlı Skewb. Akıcı dönüş ve profesyonel kalite.',
   },
   'square-1': {
     name: 'Square-1',
-    description: 'Professional Square-1 speedcube with special mechanism. High quality and durability.',
+    description: 'Özel mekanizmaya sahip profesyonel Square-1. Yüksek kalite ve dayanıklılık.',
   },
 }
 
@@ -55,16 +55,16 @@ export async function generateMetadata({
 
   if (!product) {
     return {
-      title: 'Product Not Found',
-      description: 'The product you are looking for could not be found.',
+      title: 'Ürün bulunamadı',
+      description: 'Aradığınız ürün bulunamadı.',
     }
   }
 
   return {
-    title: `${product.name} | Ready Cube Shop`,
+    title: `${product.name} | Ready Cube Mağaza`,
     description: product.description,
     openGraph: {
-      title: `${product.name} | Ready Cube Shop`,
+      title: `${product.name} | Ready Cube Mağaza`,
       description: product.description,
       type: 'website',
     },

@@ -3,10 +3,10 @@ const features = [
     title: 'Türkiye Odaklı',
   },
   {
-    title: 'Premium Kalite',
+    title: 'Üst Seviye Kalite',
   },
   {
-    title: 'Speedcubing İçin Tasarlandı',
+    title: 'Hızlı Küp İçin Tasarlandı',
   },
 ]
 

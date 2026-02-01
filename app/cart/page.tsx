@@ -40,7 +40,7 @@ export default function CartPage() {
                 href="/shop"
                 className="mt-4 inline-flex text-dark rc-underline rc-underline-brand"
               >
-                Shop’a dön →
+                Mağazaya dön →
               </Link>
             </div>
           </div>
@@ -123,7 +123,7 @@ export default function CartPage() {
                 }`}
                 aria-disabled={!canCheckout}
               >
-                Checkout’a Devam Et
+                Ödemeye Devam Et
               </Link>
               {!canCheckout && (
                 <p className="mt-3 text-sm text-gray-600">

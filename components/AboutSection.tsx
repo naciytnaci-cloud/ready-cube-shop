@@ -17,7 +17,7 @@ export default function AboutSection() {
           transition={{ duration: 0.6, ease: 'easeOut' }}
           className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 sm:mb-8 tracking-tight"
         >
-          About Ready Cube
+          Ready Cube Hakkında
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -25,7 +25,7 @@ export default function AboutSection() {
           transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
           className="text-lg sm:text-xl text-gray-400 leading-relaxed mb-4"
         >
-          Ready Cube is a platform designed by speedcubers, for speedcubers.
+          Ready Cube, hızlı küpçüler tarafından hızlı küpçüler için tasarlanmış bir platformdur.
         </motion.p>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -33,7 +33,7 @@ export default function AboutSection() {
           transition={{ duration: 0.6, delay: 0.3, ease: 'easeOut' }}
           className="text-lg sm:text-xl text-gray-400 leading-relaxed"
         >
-          We focus on the speedcubing community, creating tools and resources that matter to real cubers.
+          Hızlı küpçü topluluğuna odaklanıyor; gerçek hızlı küpçülerin işine yarayan araçlar ve kaynaklar üretiyoruz.
         </motion.p>
       </div>
     </section>

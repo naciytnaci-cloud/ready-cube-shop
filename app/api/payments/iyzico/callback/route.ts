@@ -3,8 +3,8 @@ import crypto from 'crypto'
 import { sendEmail } from '@/lib/email/smtp'
 import { assertProductionSafe, getIyzicoBaseUrl } from '@/lib/iyzico/server'
 
-// iyzico Checkout Form will POST token/paymentStatus to this callback.
-// Flow: verify payment -> generate order no -> send confirmation email -> redirect to success/failed page.
+// iyzico ödeme formu, token/paymentStatus değerlerini bu callback'e POST eder.
+// Akış: ödemeyi doğrula -> sipariş no üret -> onay e-postası gönder -> başarılı/başarısız sayfasına yönlendir.
 export async function POST(req: Request) {
   // Prevent accidental sandbox payments on production
   assertProductionSafe()

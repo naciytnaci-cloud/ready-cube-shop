@@ -80,7 +80,7 @@
     opacity: 0.88;
   }
 
-  /* Buttons: slightly bold, premium */
+  /* Butonlar: hafif kalın, üst seviye */
   button,
   [role="button"],
   input[type="button"],
@@ -111,9 +111,9 @@
   }
 }
 
-/* Page transition and loading states */
+/* Sayfa geçişi ve yükleme durumları */
 @layer utilities {
-  /* Link underline that animates from left (calm, premium) */
+  /* Soldan animasyonlu link alt çizgisi (sakin, üst seviye) */
   .rc-underline {
     position: relative;
     text-decoration: none;
